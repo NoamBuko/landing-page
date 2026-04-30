@@ -14,6 +14,7 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 });
 
+
 export const metadata: Metadata = {
   title: 'Noam Bukobza — Custom Business Software',
   description:

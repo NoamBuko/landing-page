@@ -30,7 +30,7 @@ export default function HowItWorks({ translations: t }: Props) {
               <div>
                                 <div
                   className="text-5xl font-bold tracking-tighter mb-4 select-none"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-accent-light)' }}
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-accent)' }}
                 >
                   {step.num}
                 </div>

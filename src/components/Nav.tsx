@@ -32,7 +32,7 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5vw] h-16 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5vw] h-20 transition-all duration-300 ${
         scrolled || menuOpen
           ? 'bg-background/95 backdrop-blur-md border-b border-border'
           : 'bg-transparent border-b border-transparent'
@@ -41,31 +41,31 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
       {/* Logo */}
       <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
         <div
-          className="w-8 h-8 rounded-[9px] flex items-center justify-center text-white font-bold text-sm shrink-0"
+          className="w-10 h-10 rounded-[10px] flex items-center justify-center text-white font-bold text-base shrink-0"
           style={{ backgroundColor: 'var(--color-accent)', fontFamily: 'var(--font-display)' }}
         >
           NB
         </div>
         <span>
           <span
-            className="block text-sm font-bold leading-tight text-foreground tracking-tight"
+            className="block text-base font-bold leading-tight text-foreground tracking-tight"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Noam Bukobza
           </span>
-          <span className="block text-[10px] font-medium uppercase tracking-widest" style={{ color: 'var(--color-accent)' }}>
+          <span className="block text-xs font-medium uppercase tracking-widest" style={{ color: 'var(--color-accent)' }}>
             {t.nav.work === 'Work' ? 'Software Developer' : 'מפתח תוכנה'}
           </span>
         </span>
       </button>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center gap-6">
+      <div className="hidden md:flex items-center gap-8">
         {navLinks.map((link) => (
           <button
             key={link.id}
             onClick={() => scrollTo(link.id)}
-            className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+            className="text-base font-medium text-muted hover:text-foreground transition-colors"
           >
             {link.label}
           </button>
@@ -73,7 +73,7 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
         <LangToggle lang={lang} setLang={setLang} />
         <button
           onClick={() => scrollTo('contact')}
-          className="text-sm font-medium text-white px-4 py-2 rounded-full transition-opacity hover:opacity-90"
+          className="text-base font-medium text-white px-5 py-2.5 rounded-full transition-opacity hover:opacity-90"
           style={{ backgroundColor: 'var(--color-accent)' }}
         >
           {t.nav.cta}
@@ -103,7 +103,7 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className={`absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border py-4 flex flex-col items-${isHe ? 'end' : 'start'} px-[5vw] gap-4 md:hidden`}
+          className={`absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border py-4 flex flex-col items-${isHe ? 'end' : 'start'} px-[5vw] gap-4 md:hidden`}
         >
           {navLinks.map((link) => (
             <button

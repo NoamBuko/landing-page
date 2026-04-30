@@ -9,7 +9,7 @@ export default function About({ translations: t }: Props) {
   const ab = t.about;
 
   return (
-    <section id="about" className="py-24 px-[5vw]" style={{ backgroundColor: 'white' }}>
+    <section id="about" className="py-24 px-[5vw] bg-black">
       <div className="max-w-5xl mx-auto">
         <Reveal>
           <p
@@ -24,23 +24,39 @@ export default function About({ translations: t }: Props) {
           {/* Heading */}
           <Reveal delay={60}>
             <h2
-              className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight"
+              className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              {ab.h2Lines.map((line, i) => (
-                <span key={i} className="block">
-                  {line}
-                </span>
-              ))}
+              {ab.h2Lines.map((line, i) => {
+                if (i === 2) {
+                  const split = line.lastIndexOf(' ');
+                  const before = line.slice(0, split + 1);
+                  const accent = line.slice(split + 1);
+                  return (
+                    <span key={i} className="block">
+                      {before}
+                      <em style={{ color: 'var(--color-accent)', fontStyle: 'italic' }}>{accent}</em>
+                    </span>
+                  );
+                }
+                if (i === 3) {
+                  return (
+                    <em key={i} className="block" style={{ color: 'var(--color-accent)', fontStyle: 'italic' }}>
+                      {line}
+                    </em>
+                  );
+                }
+                return <span key={i} className="block">{line}</span>;
+              })}
             </h2>
           </Reveal>
 
           {/* Content */}
           <Reveal delay={120}>
             <div className="space-y-4">
-              <p className="text-muted leading-relaxed">{ab.p1}</p>
-              <p className="text-muted leading-relaxed">{ab.p2}</p>
-              <p className="text-muted leading-relaxed">{ab.p3}</p>
+              <p className="text-neutral-400 leading-relaxed">{ab.p1}</p>
+              <p className="text-neutral-400 leading-relaxed">{ab.p2}</p>
+              <p className="text-neutral-400 leading-relaxed">{ab.p3}</p>
 
               <div className="pt-4">
                 <span

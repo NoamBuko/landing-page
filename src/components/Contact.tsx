@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { type Lang, type Translations, WHATSAPP_NUMBER } from '@/lib/translations';
+import { type Lang, type Translations } from '@/lib/translations';
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 import Reveal from './Reveal';
 
 interface Props {
@@ -169,7 +171,7 @@ export default function Contact({ translations: t, lang }: Props) {
                   >
                     {state === 'loading' ? '...' : ct.submitBtn}
                   </button>
-                  <p className="text-xs text-muted">{ct.noCommit}</p>
+                  <p className="text-base font-medium text-muted">{ct.noCommit}</p>
                 </div>
               </form>
             )}

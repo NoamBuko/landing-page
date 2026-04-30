@@ -58,18 +58,6 @@ export default function About({ translations: t }: Props) {
               <p className="text-neutral-400 leading-relaxed">{ab.p2}</p>
               <p className="text-neutral-400 leading-relaxed">{ab.p3}</p>
 
-              <div className="pt-4">
-                <span
-                  className="inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-full"
-                  style={{ color: 'var(--color-accent)', backgroundColor: 'var(--color-accent-light)' }}
-                >
-                  <span
-                    className="w-1.5 h-1.5 rounded-full animate-pulse"
-                    style={{ backgroundColor: 'var(--color-accent)' }}
-                  />
-                  {ab.badge}
-                </span>
-              </div>
             </div>
           </Reveal>
         </div>

@@ -1,8 +1,5 @@
 export type Lang = 'en' | 'he';
 
-// Replace with your WhatsApp number in international format (no + or spaces)
-// e.g. "972501234567" for Israeli number 050-123-4567
-export const WHATSAPP_NUMBER = 'YOUR_WHATSAPP_NUMBER';
 
 export const t = {
   en: {
@@ -13,10 +10,9 @@ export const t = {
       contact: 'Contact',
       cta: 'Get in touch',
     },
-    badge: 'Available for new projects',
     hero: {
-      h1: ['Custom software', 'built for your', 'business.'],
-      accentLine: 'built for your',
+      h1: ['Custom software', 'built for your business.'],
+      accentLine: 'built for your business.',
       sub: 'I build tailored management systems that replace manual work — orders, payments, scheduling, reporting — so you can focus on running your business.',
       cta1: "Let's build something →",
       cta2: 'See my work',
@@ -32,7 +28,7 @@ export const t = {
         {
           num: '01',
           title: 'Tell me how you work',
-          desc: "We hop on a free call. You walk me through your business and what's eating your time. No prep needed, no tech jargon.",
+          desc: "We hop on a free call or meet in person. You walk me through your business and what's eating your time.",
         },
         {
           num: '02',
@@ -84,12 +80,11 @@ export const t = {
       p1: "I build software for business owners who are tired of doing things the hard way. If you spend hours every week on something repetitive — tracking orders, chasing payments, organising schedules — there's a good chance I can build something that handles it for you automatically.",
       p2: "You don't need to know anything about technology. Just tell me how your business works and what's slowing you down — I handle the rest and show you something working within weeks.",
       p3: 'You work with me directly, start to finish. No confusion, no runaround.',
-      badge: 'Full-stack Developer · Available now',
     },
     contact: {
       label: 'Get in touch',
       h2: 'Tell me about your business.',
-      sub: "Describe what's currently slowing you down. If it sounds like a fit, I'll reply within 24 hours to set up a free call.",
+      sub: "Describe what's currently slowing you down. I'll reply within 24 hours to set up a free call.",
       nameLabel: 'Your name',
       namePlaceholder: 'Jane Smith',
       emailLabel: 'Email address',
@@ -117,10 +112,9 @@ export const t = {
       contact: 'צור קשר',
       cta: 'בואו נדבר',
     },
-    badge: 'זמין לפרויקטים חדשים',
     hero: {
-      h1: ['תוכנה מותאמת אישית', 'בנויה בשביל', 'העסק שלך.'],
-      accentLine: 'בנויה בשביל',
+      h1: ['תוכנה מותאמת אישית', 'בנויה בשביל העסק שלך.'],
+      accentLine: 'בנויה בשביל העסק שלך.',
       sub: 'אני בונה מערכות ניהול מותאמות שמחליפות עבודה ידנית — הזמנות, תשלומים, לוחות זמנים, דוחות — כדי שתוכלו להתמקד בניהול העסק.',
       cta1: '← בואו נבנה משהו',
       cta2: 'ראו את העבודות שלי',
@@ -136,7 +130,7 @@ export const t = {
         {
           num: '01',
           title: 'ספרו לי על העסק',
-          desc: "שיחה חינמית. אתם מסבירים לי מה עוצר אתכם בעבודה היומיומית. ללא הכנה, ללא ז'רגון טכנולוגי.",
+          desc: "שיחה חינמית או פגישה פנים אל פנים. אתם מסבירים לי מה עוצר אתכם בעבודה היומיומית.",
         },
         {
           num: '02',
@@ -188,12 +182,11 @@ export const t = {
       p1: 'אני בונה תוכנה לבעלי עסקים שנמאס להם לעשות דברים בדרך הקשה. אם אתם מבלים שעות בכל שבוע על משהו שחוזר על עצמו — מעקב הזמנות, גביית תשלומים, ארגון לוחות זמנים — יש סיכוי טוב שאוכל לבנות משהו שיעשה את זה בשבילכם אוטומטית.',
       p2: 'אתם לא צריכים לדעת כלום על טכנולוגיה. פשוט ספרו לי איך העסק שלכם עובד ומה מעכב אתכם — אני מטפל בשאר ומראה לכם משהו עובד תוך שבועות.',
       p3: 'אתם עובדים איתי ישירות, מהתחלה ועד הסוף. בלי בלבול, בלי ריצות.',
-      badge: 'מפתח Full-stack · זמין עכשיו',
     },
     contact: {
       label: 'צרו קשר',
       h2: 'ספרו לי על העסק שלכם.',
-      sub: 'תארו מה עוצר אתכם עכשיו. אם זה נשמע מתאים, אחזור אליכם תוך 24 שעות לשיחה ראשונית.',
+      sub: 'תארו מה עוצר אתכם עכשיו. אחזור אליכם תוך 24 שעות לשיחה ראשונית.',
       nameLabel: 'שמכם',
       namePlaceholder: 'ישראל ישראלי',
       emailLabel: 'כתובת מייל',

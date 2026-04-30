@@ -27,7 +27,6 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
   const navLinks = [
     { label: t.nav.work, id: 'work' },
     { label: t.nav.about, id: 'about' },
-    { label: t.nav.contact, id: 'contact' },
   ];
 
   return (
@@ -39,15 +38,24 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
       }`}
     >
       {/* Logo */}
-      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex flex-col items-start">
-        <span
-          className="text-base font-bold leading-tight text-foreground tracking-tight whitespace-nowrap"
-          style={{ fontFamily: 'var(--font-display)' }}
+      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
+        {/* NB box — desktop only */}
+        <div
+          className="hidden md:flex w-10 h-10 rounded-[10px] items-center justify-center text-white font-bold text-base shrink-0"
+          style={{ backgroundColor: 'var(--color-accent)', fontFamily: 'var(--font-display)' }}
         >
-          Noam Bukobza
-        </span>
-        <span className="text-xs font-medium uppercase tracking-widest whitespace-nowrap" style={{ color: 'var(--color-accent)' }}>
-          {t.nav.work === 'Work' ? 'Software Developer' : 'מפתח תוכנה'}
+          NB
+        </div>
+        <span className="flex flex-col items-start">
+          <span
+            className="text-base font-bold leading-tight text-foreground tracking-tight whitespace-nowrap"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Noam Bukobza
+          </span>
+          <span className="text-xs font-medium uppercase tracking-widest whitespace-nowrap" style={{ color: 'var(--color-accent)' }}>
+            {t.nav.work === 'Work' ? 'Software Developer' : 'מפתח תוכנה'}
+          </span>
         </span>
       </button>
 
@@ -124,10 +132,11 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
   return (
     <button
       onClick={() => setLang(isHe ? 'en' : 'he')}
-      className="flex items-center px-2 py-1.5 rounded-full border border-border hover:border-accent transition-colors"
+      className="flex items-center gap-1.5 px-2 md:px-3 py-1.5 rounded-full border border-border text-xs font-medium text-muted hover:border-accent hover:text-foreground transition-colors"
       aria-label={isHe ? 'Switch to English' : 'עבור לעברית'}
     >
-      <span className="text-lg leading-none">{isHe ? '🇺🇸' : '🇮🇱'}</span>
+      <span className="text-lg md:text-sm leading-none">{isHe ? '🇺🇸' : '🇮🇱'}</span>
+      <span className="hidden md:inline">{isHe ? 'EN' : 'עב'}</span>
     </button>
   );
 }

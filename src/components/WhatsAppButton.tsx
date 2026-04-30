@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { type Lang, WHATSAPP_NUMBER } from '@/lib/translations';
+import { type Lang } from '@/lib/translations';
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 interface Props {
   lang: Lang;

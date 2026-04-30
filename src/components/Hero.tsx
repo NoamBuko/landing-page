@@ -51,7 +51,7 @@ export default function Hero({ translations: t }: Props) {
         </Reveal>
 
         <Reveal delay={300}>
-          <div className="flex items-center justify-center gap-10 pt-8 border-t border-border">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-border">
             {t.stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div

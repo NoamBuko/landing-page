@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { type Translations } from '@/lib/translations';
 import Reveal from './Reveal';
 
@@ -11,55 +12,39 @@ export default function About({ translations: t }: Props) {
   return (
     <section id="about" className="py-24 px-[5vw] bg-black">
       <div className="max-w-5xl mx-auto">
-        <Reveal>
-          <p
-            className="text-xs font-semibold uppercase tracking-widest mb-3"
-            style={{ color: 'var(--color-accent)' }}
-          >
-            {ab.label}
-          </p>
-        </Reveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-          {/* Heading */}
-          <Reveal delay={60}>
-            <h2
-              className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight"
-              style={{ fontFamily: 'var(--font-display)' }}
+          {/* Col 1: image */}
+          <Reveal>
+            <Image
+              src="/noam.png"
+              alt="Noam Bukobza"
+              width={400}
+              height={400}
+              className="rounded-full w-44 lg:w-64 mx-auto lg:mx-0"
+            />
+          </Reveal>
+
+          {/* Col 2: label + bio */}
+          <Reveal delay={80}>
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-4"
+              style={{ color: 'var(--color-accent)' }}
             >
-              {ab.h2Lines.map((line, i) => {
-                if (i === 2) {
-                  const split = line.lastIndexOf(' ');
-                  const before = line.slice(0, split + 1);
-                  const accent = line.slice(split + 1);
-                  return (
-                    <span key={i} className="block">
-                      {before}
-                      <em style={{ color: 'var(--color-accent)', fontStyle: 'italic' }}>{accent}</em>
-                    </span>
-                  );
-                }
-                if (i === 3) {
-                  return (
-                    <em key={i} className="block" style={{ color: 'var(--color-accent)', fontStyle: 'italic' }}>
-                      {line}
-                    </em>
-                  );
-                }
-                return <span key={i} className="block">{line}</span>;
-              })}
-            </h2>
+              {ab.label}
+            </p>
+            <p className="text-2xl sm:text-3xl font-bold text-white leading-snug whitespace-pre-line" style={{ fontFamily: 'var(--font-display)' }}>
+              {ab.bio.split(ab.accentPhrase).map((part, i, arr) => (
+                <span key={i}>
+                  {part}
+                  {i < arr.length - 1 && (
+                    <span style={{ color: 'var(--color-accent)' }}>{ab.accentPhrase}</span>
+                  )}
+                </span>
+              ))}
+            </p>
           </Reveal>
 
-          {/* Content */}
-          <Reveal delay={120}>
-            <div className="space-y-4">
-              <p className="text-neutral-400 leading-relaxed">{ab.p1}</p>
-              <p className="text-neutral-400 leading-relaxed">{ab.p2}</p>
-              <p className="text-neutral-400 leading-relaxed">{ab.p3}</p>
-
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>

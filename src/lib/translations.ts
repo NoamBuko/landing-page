@@ -18,8 +18,10 @@ export const t = {
       cta2: 'See my work',
     },
     stats: [
-      { num: '1–2', label: 'Month delivery' },
       { num: '100%', label: 'Custom-built' },
+      { num: '0→100', label: 'Design to deployment' },
+      { num: 'EN+HE', label: 'Bilingual' },
+      { num: '24/6', label: 'Long-term support' },
     ],
     howItWorks: {
       label: 'How it works',
@@ -53,10 +55,6 @@ export const t = {
           desc: 'No generic off-the-shelf tools. I learn how your business works and build software that fits it exactly — not the other way around.',
         },
         {
-          title: 'End-to-end delivery',
-          desc: 'From order forms to payment processing to automated reports — I handle the full stack so you get a complete solution, not just a partial one.',
-        },
-        {
           title: 'Replaces hours of manual work',
           desc: 'What used to take hours of copy-pasting and manual entry becomes a single click. Your time is better spent growing the business.',
         },
@@ -64,22 +62,12 @@ export const t = {
           title: 'Clean admin dashboards',
           desc: 'Every system comes with a simple, intuitive admin panel so anyone on your team can manage it — no technical knowledge needed.',
         },
-        {
-          title: 'Fast turnaround',
-          desc: 'Solo developer means no agency overhead. Most projects are fully delivered in 1–2 months, with progress updates throughout.',
-        },
-        {
-          title: 'Long-term support',
-          desc: "I don't disappear after launch. Need a tweak six months later? I'm available, and I know the codebase inside and out.",
-        },
       ],
     },
     about: {
       label: 'About me',
-      h2Lines: ["Hi, I'm Noam.", 'I build software that', 'saves you hours', 'every week.'],
-      p1: "I build software for business owners who are tired of doing things the hard way. If you spend hours every week on something repetitive — tracking orders, chasing payments, organising schedules — there's a good chance I can build something that handles it for you automatically.",
-      p2: "You don't need to know anything about technology. Just tell me how your business works and what's slowing you down — I handle the rest and show you something working within weeks.",
-      p3: 'You work with me directly, start to finish. No confusion, no runaround.',
+      bio: "Hi, I'm Noam.\nI'm a software developer with years of experience. I build software that saves you hours every week.",
+      accentPhrase: 'hours every week',
     },
     contact: {
       label: 'Get in touch',
@@ -120,8 +108,10 @@ export const t = {
       cta2: 'ראו את העבודות שלי',
     },
     stats: [
-      { num: '1–2', label: 'חודש אספקה' },
-      { num: '100%', label: 'בנוי בהתאמה אישית' },
+      { num: '100%', label: 'בהתאמה אישית' },
+      { num: '0→100', label: 'מעיצוב עד השקה' },
+      { num: 'EN+HE', label: 'דו-לשוני' },
+      { num: '24/6', label: 'תמיכה לטווח ארוך' },
     ],
     howItWorks: {
       label: 'איך זה עובד',
@@ -155,10 +145,6 @@ export const t = {
           desc: 'אין כלים גנריים. אני לומד איך העסק שלכם עובד ובונה תוכנה שמתאימה בדיוק — לא להיפך.',
         },
         {
-          title: 'פתרון מקצה לקצה',
-          desc: 'מטפסי הזמנות ועד עיבוד תשלומים ודוחות אוטומטיים — אני מטפל בהכל כדי שתקבלו פתרון שלם.',
-        },
-        {
           title: 'מחליף שעות של עבודה ידנית',
           desc: 'מה שנהג לקחת שעות של העתקה-הדבקה הופך ללחיצה אחת. הזמן שלכם שווה יותר.',
         },
@@ -166,22 +152,12 @@ export const t = {
           title: 'ממשקי ניהול נקיים',
           desc: 'כל מערכת מגיעה עם פאנל ניהול פשוט ואינטואיטיבי — ללא צורך בידע טכנולוגי.',
         },
-        {
-          title: 'זמן פיתוח מהיר',
-          desc: 'מפתח עצמאי בלי תקורה של סוכנות. רוב הפרויקטים מסופקים תוך 1–2 חודשים עם עדכונים שוטפים.',
-        },
-        {
-          title: 'תמיכה לטווח ארוך',
-          desc: 'אני לא נעלם אחרי ההשקה. צריכים שינוי קטן חצי שנה אחרי? אני זמין ומכיר את הקוד מבפנים.',
-        },
       ],
     },
     about: {
       label: 'אודותיי',
-      h2Lines: ['היי, אני נועם.', 'אני בונה תוכנה', 'שחוסכת לכם', 'שעות בכל שבוע.'],
-      p1: 'אני בונה תוכנה לבעלי עסקים שנמאס להם לעשות דברים בדרך הקשה. אם אתם מבלים שעות בכל שבוע על משהו שחוזר על עצמו — מעקב הזמנות, גביית תשלומים, ארגון לוחות זמנים — יש סיכוי טוב שאוכל לבנות משהו שיעשה את זה בשבילכם אוטומטית.',
-      p2: 'אתם לא צריכים לדעת כלום על טכנולוגיה. פשוט ספרו לי איך העסק שלכם עובד ומה מעכב אתכם — אני מטפל בשאר ומראה לכם משהו עובד תוך שבועות.',
-      p3: 'אתם עובדים איתי ישירות, מהתחלה ועד הסוף. בלי בלבול, בלי ריצות.',
+      bio: 'היי, אני נועם. מפתח תוכנה עם שנים של ניסיון. אני בונה תוכנה שחוסכת לכם שעות בכל שבוע.',
+      accentPhrase: 'שעות בכל שבוע',
     },
     contact: {
       label: 'צרו קשר',

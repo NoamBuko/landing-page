@@ -9,19 +9,6 @@ export default function Hero({ translations: t }: Props) {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center pt-16 px-[5vw] text-center">
       <div className="max-w-3xl w-full mx-auto">
-        <Reveal>
-          <span
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-8"
-            style={{ color: 'var(--color-accent)', backgroundColor: 'var(--color-accent-light)' }}
-          >
-            <span
-              className="w-1.5 h-1.5 rounded-full animate-pulse"
-              style={{ backgroundColor: 'var(--color-accent)' }}
-            />
-            {t.badge}
-          </span>
-        </Reveal>
-
         <Reveal delay={80}>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-6"

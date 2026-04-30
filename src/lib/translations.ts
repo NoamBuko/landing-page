@@ -78,21 +78,6 @@ export const t = {
         },
       ],
     },
-    caseStudy: {
-      label: 'Recent project',
-      h2: 'From chaos to clarity.',
-      badge: 'Fruit & vegetable platter business',
-      intro:
-        'A home-based food business was managing everything through phone calls and WhatsApp. Every morning meant hours of manually copying orders from messages into a notebook, chasing payments, and building the daily summary by hand.',
-      result:
-        'I built a complete operations system — customer ordering site, admin dashboard, calendar, and payment flow — that replaced the entire manual process.',
-      chips: [
-        { before: 'WhatsApp orders', after: 'Self-serve ordering site' },
-        { before: '2 hrs/day copy-pasting', after: '1-click export' },
-        { before: 'Notebook payments', after: 'Online payment + Bit' },
-        { before: 'No calendar', after: 'Full order calendar' },
-      ],
-    },
     about: {
       label: 'About me',
       h2Lines: ["Hi, I'm Noam.", 'I build software that', 'saves you hours', 'every week.'],
@@ -195,21 +180,6 @@ export const t = {
           title: 'תמיכה לטווח ארוך',
           desc: 'אני לא נעלם אחרי ההשקה. צריכים שינוי קטן חצי שנה אחרי? אני זמין ומכיר את הקוד מבפנים.',
         },
-      ],
-    },
-    caseStudy: {
-      label: 'פרויקט אחרון',
-      h2: 'מבלגן לסדר.',
-      badge: 'עסק ביתי למגשי פירות וירקות',
-      intro:
-        'עסק ביתי לאוכל ניהל הכל דרך שיחות טלפון ווואטסאפ. כל בוקר כלל שעות של העתקה ידנית של הזמנות, מעקב אחר תשלומים, ובניית סיכום יומי ידנית.',
-      result:
-        'בניתי מערכת תפעולית שלמה — אתר הזמנות ללקוחות, לוח בקרה לניהול, לוח שנה וזרימת תשלומים — שהחליפה את כל התהליך הידני.',
-      chips: [
-        { before: 'הזמנות בוואטסאפ', after: 'אתר הזמנות עצמאי' },
-        { before: 'שעות של העתקה-הדבקה', after: 'ייצוא בלחיצה אחת' },
-        { before: 'רישום תשלומים במחברת', after: 'תשלום אונליין + ביט' },
-        { before: 'ללא לוח שנה', after: 'לוח שנה מלא להזמנות' },
       ],
     },
     about: {

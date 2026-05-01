@@ -7,7 +7,7 @@ interface Props {
 
 export default function Hero({ translations: t }: Props) {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center pt-28 md:pt-16 px-[5vw] text-center">
+    <section className="min-h-screen flex flex-col items-center justify-center pt-24 px-[5vw] text-center">
       <div className="max-w-3xl w-full mx-auto">
         <Reveal delay={80}>
           <h1

@@ -13,29 +13,29 @@ export const t = {
     hero: {
       h1: ['Custom software', 'built for your business.'],
       accentLine: 'built for your business.',
-      sub: 'I build tailored management systems that replace manual work — orders, payments, scheduling, reporting — so you can focus on running your business.',
+      sub: 'I build custom software that eliminates manual work — orders, payments, scheduling, reporting — so you can focus on running your business.',
       cta1: "Let's build something →",
       cta2: 'See my work',
     },
     stats: [
       { num: '100%', label: 'Custom-built' },
-      { num: '0→100', label: 'Design to deployment' },
+      { num: '0→100', label: 'Idea to launch' },
       { num: 'EN+HE', label: 'Bilingual' },
       { num: '24/6', label: 'Long-term support' },
     ],
     howItWorks: {
       label: 'How it works',
-      h2: 'From conversation to working system.',
+      h2: 'From your first message to a running system.',
       steps: [
         {
           num: '01',
-          title: 'Tell me how you work',
-          desc: "We hop on a free call or meet in person. You walk me through your business and what's eating your time.",
+          title: 'Show me how you work',
+          desc: "I learn exactly how your business operates — what you do manually, what's slowing you down, and what's worth automating.",
         },
         {
           num: '02',
           title: 'I build it',
-          desc: 'I design and build a system that fits exactly how you work — not a generic tool adapted to fit. You see real progress every week.',
+          desc: 'I design and build a system that fits exactly how you work — not a generic tool you have to adapt to. You see real progress every week.',
         },
         {
           num: '03',
@@ -52,11 +52,11 @@ export const t = {
       items: [
         {
           title: 'Built around your workflow',
-          desc: 'No generic off-the-shelf tools. I learn how your business works and build software that fits it exactly — not the other way around.',
+          desc: 'No generic off-the-shelf tools. I learn how your business works and build software that fits it exactly.',
         },
         {
           title: 'Replaces hours of manual work',
-          desc: 'What used to take hours of copy-pasting and manual entry becomes a single click. Your time is better spent growing the business.',
+          desc: 'What used to take hours of repetitive work becomes a single click. Your time is better spent growing the business.',
         },
         {
           title: 'Clean admin dashboards',
@@ -66,13 +66,13 @@ export const t = {
     },
     about: {
       label: 'About me',
-      bio: "Hi, I'm Noam.\nI'm a software developer with years of experience. I build software that saves you hours every week.",
-      accentPhrase: 'hours every week',
+      bio: "Hi, I'm Noam.\nI'm a full-stack developer who builds custom tools for small and medium businesses. I build software that saves you hours of work every week.",
+      accentPhrase: 'hours of work every week',
     },
     contact: {
       label: 'Get in touch',
       h2: 'Tell me about your business.',
-      sub: "Describe what's currently slowing you down. I'll reply within 24 hours to set up a free call.",
+      sub: "Tell me what's slowing you down. I'll reach out to learn more.",
       nameLabel: 'Your name',
       namePlaceholder: 'Jane Smith',
       emailLabel: 'Email address',
@@ -103,29 +103,29 @@ export const t = {
     hero: {
       h1: ['תוכנה מותאמת אישית', 'בנויה בשביל העסק שלך.'],
       accentLine: 'בנויה בשביל העסק שלך.',
-      sub: 'אני בונה מערכות ניהול מותאמות שמחליפות עבודה ידנית — הזמנות, תשלומים, לוחות זמנים, דוחות — כדי שתוכלו להתמקד בניהול העסק.',
+      sub: 'אני בונה תוכנה מותאמת שמבטלת עבודה ידנית — הזמנות, תשלומים, לוחות זמנים, דוחות — כדי שתוכלו להתמקד בניהול העסק.',
       cta1: '← בואו נבנה משהו',
       cta2: 'ראו את העבודות שלי',
     },
     stats: [
       { num: '100%', label: 'בהתאמה אישית' },
-      { num: '0→100', label: 'מעיצוב עד השקה' },
+      { num: '0→100', label: 'מרעיון עד השקה' },
       { num: 'EN+HE', label: 'דו-לשוני' },
       { num: '24/6', label: 'תמיכה לטווח ארוך' },
     ],
     howItWorks: {
       label: 'איך זה עובד',
-      h2: 'משיחה למערכת עובדת.',
+      h2: 'מההודעה הראשונה שלכם למערכת עובדת.',
       steps: [
         {
           num: '01',
-          title: 'ספרו לי על העסק',
-          desc: "שיחה חינמית או פגישה פנים אל פנים. אתם מסבירים לי מה עוצר אתכם בעבודה היומיומית.",
+          title: 'הראו לי איך אתם עובדים',
+          desc: "אני לומד בדיוק איך העסק שלכם פועל — מה אתם עושים ידנית, מה מאט אתכם, ומה שווה לאוטמט.",
         },
         {
           num: '02',
           title: 'אני בונה',
-          desc: 'אני מתכנן ובונה מערכת שמתאימה בדיוק לאיך שאתם עובדים — לא כלי גנרי. אתם רואים התקדמות אמיתית בכל שבוע.',
+          desc: 'אני מתכנן ובונה מערכת שמתאימה בדיוק לאיך שאתם עובדים — לא כלי גנרי שאתם צריכים להתאים את עצמכם אליו. אתם רואים התקדמות אמיתית בכל שבוע.',
         },
         {
           num: '03',
@@ -142,11 +142,11 @@ export const t = {
       items: [
         {
           title: 'בנוי סביב תהליך העבודה שלכם',
-          desc: 'אין כלים גנריים. אני לומד איך העסק שלכם עובד ובונה תוכנה שמתאימה בדיוק — לא להיפך.',
+          desc: 'אין כלים גנריים. אני לומד איך העסק שלכם עובד ובונה תוכנה שמתאימה בדיוק.',
         },
         {
           title: 'מחליף שעות של עבודה ידנית',
-          desc: 'מה שנהג לקחת שעות של העתקה-הדבקה הופך ללחיצה אחת. הזמן שלכם שווה יותר.',
+          desc: 'מה שנהג לקחת שעות של עבודה חוזרת ונשנית הופך ללחיצה אחת. הזמן שלכם שווה יותר.',
         },
         {
           title: 'ממשקי ניהול נקיים',
@@ -156,13 +156,13 @@ export const t = {
     },
     about: {
       label: 'אודותיי',
-      bio: 'היי, אני נועם. מפתח תוכנה עם שנים של ניסיון. אני בונה תוכנה שחוסכת לכם שעות בכל שבוע.',
-      accentPhrase: 'שעות בכל שבוע',
+      bio: 'היי, אני נועם. אני מפתח פול-סטאק שבונה כלים מותאמים לעסקים קטנים ובינוניים. אני בונה תוכנה שחוסכת לכם שעות עבודה בכל שבוע.',
+      accentPhrase: 'שעות עבודה בכל שבוע',
     },
     contact: {
       label: 'צרו קשר',
       h2: 'ספרו לי על העסק שלכם.',
-      sub: 'תארו מה עוצר אתכם עכשיו. אחזור אליכם תוך 24 שעות לשיחה ראשונית.',
+      sub: 'ספרו לי מה עוצר אתכם. אפנה אליכם לשמוע עוד.',
       nameLabel: 'שמכם',
       namePlaceholder: 'ישראל ישראלי',
       emailLabel: 'כתובת מייל',

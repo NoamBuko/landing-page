@@ -39,13 +39,14 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
     >
       {/* Logo */}
       <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
-        {/* NB box — desktop only */}
-        <div
-          className="hidden md:flex w-10 h-10 rounded-[10px] items-center justify-center text-white font-bold text-base shrink-0"
-          style={{ backgroundColor: 'var(--color-accent)', fontFamily: 'var(--font-display)' }}
-        >
-          NB
-        </div>
+        {/* NB logo — desktop only */}
+        <img
+          src="/logo.svg"
+          alt="Noam Bukobza"
+          width={40}
+          height={40}
+          className="hidden md:block w-10 h-10 shrink-0"
+        />
         <span className="flex flex-col items-start">
           <span
             className="text-base font-bold leading-tight text-foreground tracking-tight whitespace-nowrap"

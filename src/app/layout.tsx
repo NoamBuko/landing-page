@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  title: 'Noam Bukobza — Custom Business Software',
+  title: 'Noam Bukobza',
   description:
     'I build tailored management systems that replace manual work — orders, payments, scheduling, reporting — so you can focus on running your business.',
   openGraph: {

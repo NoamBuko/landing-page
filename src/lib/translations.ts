@@ -44,26 +44,6 @@ export const t = {
         },
       ],
     },
-    valueProps: {
-      label: 'What you get',
-      h2a: 'Software that works the way ',
-      h2b: 'you',
-      h2c: ' work.',
-      items: [
-        {
-          title: 'Built around your workflow',
-          desc: 'No generic off-the-shelf tools. I learn how your business works and build software that fits it exactly.',
-        },
-        {
-          title: 'Replaces hours of manual work',
-          desc: 'What used to take hours of repetitive work becomes a single click. Your time is better spent growing the business.',
-        },
-        {
-          title: 'Clean admin dashboards',
-          desc: 'Every system comes with a simple, intuitive admin panel so anyone on your team can manage it — no technical knowledge needed.',
-        },
-      ],
-    },
     about: {
       label: 'About me',
       bio: "Hi, I'm Noam.\nI'm a full-stack developer who builds custom tools for small and medium businesses. I build software that saves you hours of work every week.",
@@ -131,26 +111,6 @@ export const t = {
           num: '03',
           title: 'אתם מנהלים',
           desc: 'אתם מקבלים מערכת פשוטה שכל הצוות יכול להשתמש בה מהיום הראשון. אני זמין לשינויים גם אחרי ההשקה.',
-        },
-      ],
-    },
-    valueProps: {
-      label: 'מה תקבלו',
-      h2a: 'תוכנה שעובדת בדיוק כמו ש',
-      h2b: 'אתם',
-      h2c: ' עובדים.',
-      items: [
-        {
-          title: 'בנוי סביב תהליך העבודה שלכם',
-          desc: 'אין כלים גנריים. אני לומד איך העסק שלכם עובד ובונה תוכנה שמתאימה בדיוק.',
-        },
-        {
-          title: 'מחליף שעות של עבודה ידנית',
-          desc: 'מה שנהג לקחת שעות של עבודה חוזרת ונשנית הופך ללחיצה אחת. הזמן שלכם שווה יותר.',
-        },
-        {
-          title: 'ממשקי ניהול נקיים',
-          desc: 'כל מערכת מגיעה עם פאנל ניהול פשוט ואינטואיטיבי — ללא צורך בידע טכנולוגי.',
         },
       ],
     },

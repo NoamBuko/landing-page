@@ -4,7 +4,6 @@ import { t, type Lang } from '@/lib/translations';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
-import ValueProps from '@/components/ValueProps';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -25,7 +24,6 @@ export default function Home() {
       <main>
         <Hero translations={translations} />
         <HowItWorks translations={translations} />
-        <ValueProps translations={translations} />
         <About translations={translations} />
         <Contact translations={translations} lang={lang} />
       </main>

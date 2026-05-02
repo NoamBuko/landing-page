@@ -7,7 +7,7 @@ interface Props {
 
 export default function HowItWorks({ translations: t }: Props) {
   return (
-    <section id="work" className="py-24 px-[5vw]">
+    <section id="process" className="py-24 px-[5vw]">
       <div className="max-w-5xl mx-auto">
         <Reveal>
           <p

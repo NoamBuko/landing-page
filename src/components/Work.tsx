@@ -55,11 +55,18 @@ export default function Work({ translations: t }: Props) {
                       <span>{f}</span>
                     </li>
                   ))}
+                  <li className="col-span-2 flex items-center gap-2 text-sm text-foreground">
+                    <span
+                      className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    />
+                    <span>{w.bilingual}</span>
+                  </li>
                 </ul>
               </Reveal>
 
               <Reveal delay={180}>
-                <div className="flex flex-col gap-2 mb-6 pt-5 border-t border-border/70">
+                <div className="flex flex-col gap-2.5 mb-6 pt-5 border-t border-border/70">
                   {w.impact.map((it) => (
                     <div key={it.label} className="flex items-center gap-2.5">
                       <svg
@@ -86,7 +93,6 @@ export default function Work({ translations: t }: Props) {
               </Reveal>
 
               <Reveal delay={240}>
-                <p className="text-xs text-muted mb-5">{w.bilingual}</p>
                 <a
                   href={w.liveUrl}
                   target="_blank"

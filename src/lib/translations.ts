@@ -5,24 +5,18 @@ export const t = {
   en: {
     dir: 'ltr' as const,
     nav: {
-      work: 'Work',
+      work: 'My work',
       about: 'About',
       contact: 'Contact',
       cta: 'Get in touch',
     },
     hero: {
-      h1: ['Custom software', 'built for your business.'],
-      accentLine: 'built for your business.',
-      sub: "Imagine a system that fits your business exactly — and runs whatever you're currently doing manually.",
+      h1: ['Your business runs on manual work —', "it doesn't have to."],
+      accentLine: "it doesn't have to.",
+      sub: "I'll build one system that works the way you work — everything you need, nothing you don't.",
       cta1: "Let's build something →",
       cta2: 'See my work',
     },
-    stats: [
-      { num: '100%', label: 'Custom-built' },
-      { num: '0→100', label: 'Idea to launch' },
-      { num: 'EN+HE', label: 'Bilingual' },
-      { num: '24/6', label: 'Long-term support' },
-    ],
     howItWorks: {
       label: 'How it works',
       h2: 'From your first message to a running system.',
@@ -68,8 +62,8 @@ export const t = {
     },
     about: {
       label: 'About me',
-      bio: "Hi, I'm Noam.\nI'm a full-stack developer who builds custom tools for small and medium businesses. I build software that saves you hours of work every week.",
-      accentPhrase: 'hours of work every week',
+      greeting: "Hi, I'm Noam.",
+      bio: "I'm a full-stack developer who builds custom tools that save you hours of manual work every week.",
     },
     contact: {
       label: 'Get in touch',
@@ -97,24 +91,18 @@ export const t = {
   he: {
     dir: 'rtl' as const,
     nav: {
-      work: 'עבודות',
+      work: 'העבודות שלי',
       about: 'אודות',
       contact: 'צור קשר',
       cta: 'בואו נדבר',
     },
     hero: {
-      h1: ['תוכנה מותאמת אישית', 'בנויה בשביל העסק שלך.'],
-      accentLine: 'בנויה בשביל העסק שלך.',
-      sub: 'דמיינו מערכת שתפורה בדיוק לעסק שלכם — ומטפלת בכל מה שאתם עושים היום ידנית.',
+      h1: ['העסק שלכם פועל על עבודה ידנית —', 'זה לא חייב להיות ככה.'],
+      accentLine: 'זה לא חייב להיות ככה.',
+      sub: 'אבנה לכם מערכת אחת שעובדת כמו שאתם עובדים — כל מה שצריך, ושום דבר שלא.',
       cta1: '← בואו נבנה משהו',
       cta2: 'ראו את העבודות שלי',
     },
-    stats: [
-      { num: '100%', label: 'בהתאמה אישית' },
-      { num: '0→100', label: 'מרעיון עד השקה' },
-      { num: 'EN+HE', label: 'דו-לשוני' },
-      { num: '24/6', label: 'תמיכה לטווח ארוך' },
-    ],
     howItWorks: {
       label: 'איך זה עובד',
       h2: 'מההודעה הראשונה שלכם למערכת עובדת.',
@@ -160,8 +148,8 @@ export const t = {
     },
     about: {
       label: 'אודותיי',
-      bio: 'היי, אני נועם. אני מפתח פול-סטאק שבונה כלים מותאמים לעסקים קטנים ובינוניים. אני בונה תוכנה שחוסכת לכם שעות עבודה בכל שבוע.',
-      accentPhrase: 'שעות עבודה בכל שבוע',
+      greeting: 'היי, אני נועם.',
+      bio: 'אני מפתח פול-סטאק שבונה כלים מותאמים שחוסכים לכם שעות עבודה ידנית בכל שבוע.',
     },
     contact: {
       label: 'צרו קשר',

@@ -24,12 +24,12 @@ export const t = {
         {
           num: '01',
           title: 'Show me how you work',
-          desc: "I learn exactly how your business operates — what you do manually, what's slowing you down, and what's worth automating.",
+          desc: "I learn how your business operates — what you do manually, what's slowing you down, and what's worth automating.",
         },
         {
           num: '02',
           title: 'I build it',
-          desc: 'I design and build a system that fits exactly how you work — not a generic tool you have to adapt to. You see real progress every week.',
+          desc: 'I design and build a system that fits exactly how you work. You see real progress every week.',
         },
         {
           num: '03',
@@ -99,8 +99,8 @@ export const t = {
     hero: {
       h1: ['העסק שלכם פועל על עבודה ידנית —', 'זה לא חייב להיות ככה.'],
       accentLine: 'זה לא חייב להיות ככה.',
-      sub: 'אבנה לכם מערכת אחת שעובדת כמו שאתם עובדים — כל מה שצריך, ושום דבר שלא.',
-      cta1: '← בואו נבנה משהו',
+      sub: 'אבנה לכם מערכת אחת שעובדת כמו שאתם עובדים — עם כל מה שאתם צריכים, ושום דבר שלא.',
+      cta1: 'בואו נבנה משהו ←',
       cta2: 'ראו את העבודות שלי',
     },
     howItWorks: {
@@ -110,12 +110,12 @@ export const t = {
         {
           num: '01',
           title: 'הראו לי איך אתם עובדים',
-          desc: "אני לומד בדיוק איך העסק שלכם פועל — מה אתם עושים ידנית, מה מאט אתכם, ומה שווה לאוטמט.",
+          desc: "אני מבין איך העסק שלכם פועל — מה אתם עושים ידנית, מה מאט אתכם, ומה ניתן לשפר.",
         },
         {
           num: '02',
           title: 'אני בונה',
-          desc: 'אני מתכנן ובונה מערכת שמתאימה בדיוק לאיך שאתם עובדים — לא כלי גנרי שאתם צריכים להתאים את עצמכם אליו. אתם רואים התקדמות אמיתית בכל שבוע.',
+          desc: 'אני מתכנן ובונה מערכת שמתאימה בדיוק לאיך שאתם עובדים. אתם רואים התקדמות אמיתית בכל שבוע.',
         },
         {
           num: '03',
@@ -149,7 +149,7 @@ export const t = {
     about: {
       label: 'אודותיי',
       greeting: 'היי, אני נועם.',
-      bio: 'אני מפתח פול-סטאק שבונה כלים מותאמים שחוסכים לכם שעות עבודה ידנית בכל שבוע.',
+      bio: 'אני מפתח פול-סטאק שבונה כלים מותאמים אישית שחוסכים לכם שעות של עבודה ידנית בכל שבוע.',
     },
     contact: {
       label: 'צרו קשר',

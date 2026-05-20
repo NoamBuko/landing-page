@@ -69,7 +69,7 @@ export const t = {
     about: {
       label: 'About me',
       greeting: "Hi, I'm Noam.",
-      bio: "I'm a full-stack developer who builds custom tools that save you hours of manual work every week.",
+      bio: 'I started building custom software when I wanted to save my mom hours of work every week running her business. Now let me build yours.',
     },
     contact: {
       label: 'Get in touch',
@@ -161,7 +161,7 @@ export const t = {
     about: {
       label: 'אודותיי',
       greeting: 'היי, אני נועם.',
-      bio: 'אני מפתח פול-סטאק שבונה כלים מותאמים אישית שחוסכים לכם שעות של עבודה ידנית בכל שבוע.',
+      bio: 'התחלתי לבנות תוכנה מותאמת אישית כשרציתי לחסוך לאמא שלי שעות עבודה בעסק שלה בכל שבוע. עכשיו תנו לי לבנות גם את שלכם.',
     },
     contact: {
       label: 'צרו קשר',

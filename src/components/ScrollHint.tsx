@@ -44,7 +44,7 @@ export default function ScrollHint({ label }: Props) {
       aria-label={label}
       aria-hidden={visible ? undefined : 'true'}
       tabIndex={visible ? 0 : -1}
-      className={`absolute bottom-6 left-1/2 -translate-x-1/2 inline-flex items-center justify-center w-10 h-10 rounded-full border border-border bg-background/70 backdrop-blur text-muted hover:text-foreground hover:border-accent transition-[opacity,color,border-color] duration-300 ${
+      className={`hidden sm:inline-flex absolute bottom-6 left-1/2 -translate-x-1/2 items-center justify-center w-10 h-10 rounded-full border border-border bg-background/70 backdrop-blur text-muted hover:text-foreground hover:border-accent transition-[opacity,color,border-color] duration-300 ${
         visible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >

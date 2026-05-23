@@ -9,7 +9,7 @@ interface Props {
 
 export default function Hero({ translations: t }: Props) {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-start pt-20 sm:pt-24 pb-10 px-[5vw] text-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 sm:pt-24 pb-10 px-[5vw] text-center overflow-hidden">
       <Reveal delay={40}>
         <p
           className="text-[0.7rem] sm:text-xs font-semibold tracking-[0.22em] uppercase mb-4 sm:mb-5"

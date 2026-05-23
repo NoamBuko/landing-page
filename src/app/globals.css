@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
 @theme inline {
   --color-background: #f9f8f6;
   --color-foreground: #111210;

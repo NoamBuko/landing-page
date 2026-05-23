@@ -6,7 +6,7 @@ export const t = {
     dir: 'ltr' as const,
     nav: {
       work: 'My work',
-      about: 'About',
+      about: 'About me',
       contact: 'Contact',
       cta: 'Get in touch',
     },
@@ -45,7 +45,7 @@ export const t = {
       ],
     },
     work: {
-      label: 'Selected work',
+      label: 'My latest work',
       client: 'Pri Hadar',
       tagline: 'Fruit & vegetable platters',
       h2: 'Online ordering & operations system.',
@@ -98,7 +98,7 @@ export const t = {
     dir: 'rtl' as const,
     nav: {
       work: 'העבודות שלי',
-      about: 'אודות',
+      about: 'אודותיי',
       contact: 'צור קשר',
       cta: 'בואו נדבר',
     },
@@ -137,13 +137,13 @@ export const t = {
       ],
     },
     work: {
-      label: 'עבודה נבחרת',
+      label: 'הפרויקט האחרון שלי',
       client: 'פרי הדר',
       tagline: 'מגשי פירות וירקות',
       h2: 'מערכת הזמנות וניהול אונליין.',
       desc: 'החלפנו פנקס הזמנות ידני בחוויית הזמנה מקוונת מלאה ובמערכת ניהול שמפעילה את כל העסק.',
       features: [
-        'הזמנה ותשלום אונליין',
+        'הזמנות ותשלום אונליין',
         'דשבורד ניהול',
         'ניהול הזמנות',
         'יומן משלוחים',
@@ -161,7 +161,7 @@ export const t = {
     about: {
       label: 'אודותיי',
       greeting: 'היי, אני נועם.',
-      bio: 'התחלתי לבנות תוכנה מותאמת אישית כשרציתי לחסוך לאמא שלי שעות עבודה בעסק שלה בכל שבוע. עכשיו תנו לי לבנות גם את שלכם.',
+      bio: 'התחלתי לבנות תוכנה מותאמת אישית כשרציתי לחסוך לאמא שלי שעות של עבודה בניהול העסק שלה בכל שבוע. עכשיו תנו לי לבנות גם את שלכם.',
     },
     contact: {
       label: 'צרו קשר',

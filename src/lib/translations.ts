@@ -7,6 +7,7 @@ export const t = {
     nav: {
       work: 'My work',
       about: 'About me',
+      faq: 'FAQ',
       contact: 'Contact',
       cta: 'Get in touch',
     },
@@ -30,11 +31,16 @@ export const t = {
         },
         {
           num: '02',
+          title: 'You get a clear quote',
+          desc: 'I send you a fixed price and exactly what your system will include — full scope, no surprises — before any work begins.',
+        },
+        {
+          num: '03',
           title: 'I build it',
           desc: 'I design and build a system that fits exactly how you work. You see real progress every week.',
         },
         {
-          num: '03',
+          num: '04',
           title: 'You run it',
           desc: 'You get a clean, simple system your whole team can use from day one. I stay available for changes long after launch.',
         },
@@ -65,7 +71,41 @@ export const t = {
     about: {
       label: 'About me',
       greeting: "Hi, I'm Noam.",
-      bio: 'I started building custom software when I wanted to save my mom hours of work every week running her business. Now let me build yours.',
+      bio: 'I spent two years building software at startups, then moved on to building custom software to save my mom hours of work every week running her business. Now let me build the software your business needs.',
+    },
+    faq: {
+      label: 'FAQ',
+      h2: 'Questions, answered.',
+      items: [
+        {
+          q: 'What kind of systems do you build?',
+          a: 'Whatever your business actually needs. I build fully custom systems designed around how you work — online ordering, scheduling, payments, admin dashboards, internal tools and more. If a manual process is slowing you down, it can probably be built into something better.',
+        },
+        {
+          q: 'Do I need to be technical to use it?',
+          a: 'Not at all. I build everything to be simple enough that you and your team can use it from day one — and I’ll walk you through it so nothing feels unfamiliar.',
+        },
+        {
+          q: 'What if I’m not sure exactly what I need?',
+          a: 'That’s completely normal — most people aren’t. Figuring it out together is exactly what the first step is for. You just tell me about your business, and we’ll shape the solution from there.',
+        },
+        {
+          q: 'How much does it cost?',
+          a: 'Every project gets a fixed price upfront. Before any work begins, I send you a clear quote with exactly what your system will include — so you know the full cost from the start, with no surprises.',
+        },
+        {
+          q: 'How long does it take?',
+          a: 'It depends on what you need — a simple scheduling tool and a full ordering system are very different projects. You get a clear timeline together with your quote, before we start.',
+        },
+        {
+          q: 'What happens after launch?',
+          a: 'You’re never left on your own. I stand behind everything I build, so anything on me I’ll take care of, no charge — and when you’re ready to add new features down the line, I’m one message away.',
+        },
+        {
+          q: 'Do I own the system?',
+          a: 'Completely. The code, the website, and every account it runs on are in your name — never mine. It’s yours to keep, no strings attached.',
+        },
+      ],
     },
     contact: {
       label: 'Get in touch',
@@ -95,6 +135,7 @@ export const t = {
     nav: {
       work: 'העבודות שלי',
       about: 'אודותיי',
+      faq: 'שאלות נפוצות',
       contact: 'צור קשר',
       cta: 'בואו נדבר',
     },
@@ -118,11 +159,16 @@ export const t = {
         },
         {
           num: '02',
+          title: 'מקבלים הצעת מחיר ברורה',
+          desc: 'אני שולח לכם מחיר סגור ובדיוק מה שהמערכת תכלול — כל הפרטים, בלי הפתעות — לפני שמתחילים לעבוד.',
+        },
+        {
+          num: '03',
           title: 'אני בונה',
           desc: 'אני מתכנן ובונה מערכת שמתאימה בדיוק לאיך שאתם עובדים. אתם רואים התקדמות אמיתית בכל שבוע.',
         },
         {
-          num: '03',
+          num: '04',
           title: 'אתם מנהלים',
           desc: 'אתם מקבלים מערכת פשוטה שכל הצוות יכול להשתמש בה מהיום הראשון. אני זמין לשינויים גם אחרי ההשקה.',
         },
@@ -153,7 +199,41 @@ export const t = {
     about: {
       label: 'אודותיי',
       greeting: 'היי, אני נועם.',
-      bio: 'התחלתי לבנות תוכנה מותאמת אישית כשרציתי לחסוך לאמא שלי שעות של עבודה בניהול העסק שלה בכל שבוע. עכשיו תנו לי לבנות גם את שלכם.',
+      bio: 'במשך שנתיים בניתי תוכנה בסטארטאפים, ואז עברתי לבנות תוכנה מותאמת אישית כדי לחסוך לאמא שלי שעות של עבודה בכל שבוע בניהול העסק שלה. עכשיו תנו לי לבנות את התוכנה שהעסק שלכם צריך.',
+    },
+    faq: {
+      label: 'שאלות נפוצות',
+      h2: 'שאלות? יש לי תשובות.',
+      items: [
+        {
+          q: 'אילו מערכות אתה בונה?',
+          a: 'מה שהעסק שלכם באמת צריך. אני בונה מערכות מותאמות אישית לחלוטין, מתוכננות סביב איך שאתם עובדים — הזמנות אונליין, ניהול תורים, תשלומים, דשבורד ניהול, כלים פנימיים ועוד. אם תהליך ידני מעכב אתכם, כנראה אפשר לבנות לו פתרון טוב יותר.',
+        },
+        {
+          q: 'צריך ידע טכני כדי להשתמש במערכת?',
+          a: 'ממש לא. אני בונה הכל כך שיהיה פשוט מספיק שאתם והצוות שלכם תוכלו להשתמש בו מהיום הראשון — ואני אעבור איתכם על הכל לפני ההשקה.',
+        },
+        {
+          q: 'מה אם אני לא בטוח מה בדיוק אני צריך?',
+          a: 'זה לגמרי נורמלי. אני אעזור לכם להבין. אתם פשוט מספרים לי על העסק שלכם, ומשם נעצב את הפתרון.',
+        },
+        {
+          q: 'כמה זה עולה?',
+          a: 'כל פרויקט מקבל מחיר סגור מראש. לפני שמתחילים לעבוד, אני שולח לכם הצעת מחיר ברורה עם בדיוק מה שהמערכת תכלול — כך שאתם יודעים את העלות המלאה כבר מההתחלה, בלי הפתעות.',
+        },
+        {
+          q: 'כמה זמן זה לוקח?',
+          a: 'זה תלוי במה שאתם צריכים — אפליקציית תורים פשוטה ומערכת הזמנות מלאה הן פרויקטים שונים לגמרי. אתם מקבלים לוח זמנים ברור יחד עם הצעת המחיר, לפני שמתחילים.',
+        },
+        {
+          q: 'מה קורה אחרי ההשקה?',
+          a: 'אתם אף פעם לא לבד. אני עומד מאחורי כל מה שאני בונה, וכל דבר שתלוי בי אני מטפל בו ללא תשלום — וכשתרצו להוסיף יכולות בהמשך, אני במרחק הודעה.',
+        },
+        {
+          q: 'האם המערכת בבעלותי?',
+          a: 'לחלוטין. הקוד, האתר וכל חשבון שהמערכת רצה עליו רשומים על שמכם — אף פעם לא על שמי. הכל שלכם, בלי שום מחויבות.',
+        },
+      ],
     },
     contact: {
       label: 'צרו קשר',

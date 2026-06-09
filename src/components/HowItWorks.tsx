@@ -24,7 +24,7 @@ export default function HowItWorks({ translations: t }: Props) {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {t.howItWorks.steps.map((step, i) => (
             <Reveal key={step.num} delay={i * 100}>
               <div>

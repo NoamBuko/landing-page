@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
 import Work from '@/components/Work';
 import About from '@/components/About';
+import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -27,6 +28,7 @@ export default function Home() {
         <HowItWorks translations={translations} />
         <Work translations={translations} />
         <About translations={translations} />
+        <FAQ translations={translations} />
         <Contact translations={translations} lang={lang} />
       </main>
       <Footer translations={translations} />

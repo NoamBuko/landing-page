@@ -1,6 +1,5 @@
 import { type Translations } from '@/lib/translations';
 import Reveal from './Reveal';
-import HeroVisuals from './HeroVisuals';
 import ScrollHint from './ScrollHint';
 
 interface Props {
@@ -9,11 +8,14 @@ interface Props {
 
 export default function Hero({ translations: t }: Props) {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 sm:pt-24 pb-10 px-[5vw] text-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-[5vw] py-24 sm:py-28 text-center overflow-hidden">
       <Reveal delay={40}>
         <p
-          className="text-[0.7rem] sm:text-xs font-semibold tracking-[0.22em] uppercase mb-4 sm:mb-5"
-          style={{ color: 'var(--color-accent)' }}
+          className="font-semibold tracking-[0.22em] uppercase mb-5 sm:mb-7"
+          style={{
+            color: 'var(--color-accent)',
+            fontSize: 'clamp(0.7rem, 0.64rem + 0.3vw, 0.85rem)',
+          }}
         >
           {t.hero.eyebrow}
         </p>
@@ -21,8 +23,11 @@ export default function Hero({ translations: t }: Props) {
 
       <Reveal delay={80}>
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.1] tracking-tight text-foreground mb-4 max-w-3xl"
-          style={{ fontFamily: 'var(--font-display)' }}
+          className="font-bold leading-[1.06] tracking-tight text-foreground mb-5 sm:mb-7 max-w-[18ch]"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(2.1rem, 1rem + 5vw, 5rem)',
+          }}
         >
           {t.hero.h1Lead}
           <span style={{ color: 'var(--color-accent)' }}>{t.hero.h1Accent}</span>
@@ -30,31 +35,30 @@ export default function Hero({ translations: t }: Props) {
       </Reveal>
 
       <Reveal delay={140}>
-        <p className="text-base md:text-lg text-muted leading-relaxed max-w-xl mx-auto mb-6 sm:mb-8">
+        <p
+          className="text-muted leading-relaxed max-w-[38ch] sm:max-w-2xl mx-auto mb-9 sm:mb-11"
+          style={{ fontSize: 'clamp(1.05rem, 0.95rem + 0.6vw, 1.5rem)' }}
+        >
           {t.hero.sub}
         </p>
       </Reveal>
 
       <Reveal delay={200}>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 sm:mb-10 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: 'var(--color-accent)' }}
           >
             {t.hero.cta1}
           </a>
           <a
             href="#work"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-foreground border border-border hover:border-accent transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-foreground border border-border hover:border-accent transition-colors"
           >
             {t.hero.cta2}
           </a>
         </div>
-      </Reveal>
-
-      <Reveal delay={260} className="w-full">
-        <HeroVisuals translations={t} />
       </Reveal>
 
       <ScrollHint label={t.hero.scrollHint} />

@@ -17,10 +17,6 @@ export const t = {
       sub: 'Whether you currently manage your business using WhatsApp, spreadsheets or a notebook — there is a better way.',
       cta1: "Let's build something →",
       cta2: 'See my work',
-      beforeTab: 'Today',
-      afterTab: 'How it should be',
-      beforeAlt: 'Today — orders scattered across WhatsApp, spreadsheets and notebooks',
-      afterAlt: 'With one system — a single clean orders dashboard',
       scrollHint: 'Scroll to see more',
     },
     howItWorks: {
@@ -109,10 +105,6 @@ export const t = {
       sub: 'בין אם אתם מנהלים את העסק שלכם דרך וואטסאפ, אקסל או פנקס — יש דרך טובה יותר.',
       cta1: 'בואו נבנה משהו ←',
       cta2: 'ראו את העבודות שלי',
-      beforeTab: 'היום',
-      afterTab: 'ככה זה צריך להיות',
-      beforeAlt: 'היום — הזמנות מפוזרות בין וואטסאפ, אקסלים ופנקסים',
-      afterAlt: 'עם מערכת אחת — דשבורד הזמנות אחד ונקי',
       scrollHint: 'גללו כדי לראות עוד',
     },
     howItWorks: {

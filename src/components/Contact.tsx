@@ -24,23 +24,21 @@ const WhatsAppIcon = () => (
 export default function Contact({ translations: t, lang }: Props) {
   const ct = t.contact;
   const [state, setState] = useState<FormState>('idle');
-  const [form, setForm] = useState({ name: '', email: '', biz: '', msg: '' });
+  const [form, setForm] = useState({ name: '', phone: '', msg: '', gotcha: '' });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setState('loading');
 
-    if (!FORMSPREE_ID) {
-      window.location.href = `mailto:noambuko10@gmail.com?subject=New inquiry from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(`Business: ${form.biz}\n\n${form.msg}`)}`;
-      setState('idle');
-      return;
-    }
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
 
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ name: form.name, email: form.email, business: form.biz, message: form.msg }),
+        body: JSON.stringify({ name: form.name, phone: form.phone, message: form.msg, _gotcha: form.gotcha }),
+        signal: controller.signal,
       });
       if (res.ok) {
         setState('success');
@@ -49,6 +47,8 @@ export default function Contact({ translations: t, lang }: Props) {
       }
     } catch {
       setState('error');
+    } finally {
+      clearTimeout(timeout);
     }
   };
 
@@ -120,6 +120,18 @@ export default function Contact({ translations: t, lang }: Props) {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot — hidden from real users; bots fill it and get discarded by Formspree */}
+              <input
+                type="text"
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={form.gotcha}
+                onChange={(e) => setForm((f) => ({ ...f, gotcha: e.target.value }))}
+                className="absolute -left-[9999px] w-px h-px opacity-0"
+              />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>{ct.nameLabel}</label>
@@ -133,28 +145,17 @@ export default function Contact({ translations: t, lang }: Props) {
                   />
                 </div>
                 <div>
-                  <label className={labelClass}>{ct.emailLabel}</label>
+                  <label className={labelClass}>{ct.phoneLabel}</label>
                   <input
-                    type="email"
+                    type="tel"
                     required
-                    placeholder={ct.emailPlaceholder}
-                    value={form.email}
-                    onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                    inputMode="tel"
+                    placeholder={ct.phonePlaceholder}
+                    value={form.phone}
+                    onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                     className={inputClass}
                   />
                 </div>
-              </div>
-
-              <div>
-                <label className={labelClass}>{ct.bizLabel}</label>
-                <input
-                  type="text"
-                  required
-                  placeholder={ct.bizPlaceholder}
-                  value={form.biz}
-                  onChange={(e) => setForm((f) => ({ ...f, biz: e.target.value }))}
-                  className={inputClass}
-                />
               </div>
 
               <div>

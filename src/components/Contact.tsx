@@ -79,7 +79,7 @@ export default function Contact({ translations: t, lang }: Props) {
         <Reveal delay={80}>
           <div className="flex justify-center mb-6">
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(ct.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 text-sm font-semibold px-5 py-3 rounded-full text-white transition-opacity hover:opacity-90"

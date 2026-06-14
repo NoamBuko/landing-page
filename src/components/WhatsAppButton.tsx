@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { type Lang } from '@/lib/translations';
+import { t, type Lang } from '@/lib/translations';
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
@@ -11,10 +11,11 @@ interface Props {
 export default function WhatsAppButton({ lang }: Props) {
   const [hovered, setHovered] = useState(false);
   const label = lang === 'he' ? 'שלחו הודעה בוואטסאפ' : 'Message on WhatsApp';
+  const message = encodeURIComponent(t[lang].contact.whatsappMessage);
 
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}`}
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => setHovered(true)}

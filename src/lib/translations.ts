@@ -122,7 +122,7 @@ export const t = {
       whatsappMessage: 'Hi Noam, I came from your website and I\'d love to hear more.',
       noCommit: 'No commitment. Just a conversation.',
       successTitle: 'Message sent!',
-      successMsg: "Thanks for reaching out. I'll get back to you within 24 hours.",
+      successMsg: "Thanks for reaching out. I'll get back to you shortly.",
       errorMsg: 'Something went wrong. Please try again or message me on WhatsApp.',
     },
     footer: {
@@ -249,7 +249,7 @@ export const t = {
       whatsappMessage: 'היי נועם, הגעתי מהאתר ואשמח לשמוע עוד.',
       noCommit: 'ללא התחייבות. רק שיחה.',
       successTitle: 'ההודעה נשלחה!',
-      successMsg: 'תודה על הפנייה. אחזור אליכם תוך 24 שעות.',
+      successMsg: 'תודה על הפנייה. אחזור אליכם בהקדם.',
       errorMsg: 'משהו השתבש. נסו שוב או שלחו הודעה בוואטסאפ.',
     },
     footer: {

@@ -4,6 +4,11 @@ export type Lang = 'en' | 'he';
 export const t = {
   en: {
     dir: 'ltr' as const,
+    meta: {
+      title: 'Noam Bukobza — Custom Business Software & Automation',
+      description:
+        'I build the custom software your business needs — from management systems that replace manual work to clean, fast websites and landing pages.',
+    },
     nav: {
       work: 'My work',
       about: 'About me',
@@ -132,6 +137,11 @@ export const t = {
   },
   he: {
     dir: 'rtl' as const,
+    meta: {
+      title: 'נועם בוקובזה — תוכנה מותאמת אישית לעסקים',
+      description:
+        'אני בונה את התוכנה המותאמת אישית שהעסק שלכם צריך — ממערכות ניהול שמחליפות עבודה ידנית ועד אתרים ודפי נחיתה מהירים ונקיים.',
+    },
     nav: {
       work: 'העבודות שלי',
       about: 'אודותיי',

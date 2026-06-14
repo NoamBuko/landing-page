@@ -5,10 +5,9 @@ import { type Lang, type Translations } from '@/lib/translations';
 interface Props {
   translations: Translations;
   lang: Lang;
-  setLang: (l: Lang) => void;
 }
 
-export default function Nav({ translations: t, lang, setLang }: Props) {
+export default function Nav({ translations: t, lang }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const isHe = lang === 'he';
@@ -72,7 +71,7 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
             {link.label}
           </button>
         ))}
-        <LangToggle lang={lang} setLang={setLang} />
+        <LangToggle lang={lang} />
         <button
           onClick={() => scrollTo('contact')}
           className="text-base font-medium text-white px-5 py-2.5 rounded-full transition-opacity hover:opacity-90"
@@ -84,7 +83,7 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
 
       {/* Mobile controls */}
       <div className="flex md:hidden items-center gap-2">
-        <LangToggle lang={lang} setLang={setLang} />
+        <LangToggle lang={lang} />
         <button
           onClick={() => setMenuOpen((o) => !o)}
           className="p-2 text-foreground"
@@ -129,16 +128,16 @@ export default function Nav({ translations: t, lang, setLang }: Props) {
   );
 }
 
-function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
+function LangToggle({ lang }: { lang: Lang }) {
   const isHe = lang === 'he';
   return (
-    <button
-      onClick={() => setLang(isHe ? 'en' : 'he')}
+    <a
+      href={isHe ? '/en' : '/he'}
       className="flex items-center gap-1.5 px-2 md:px-3 py-1.5 rounded-full border border-border text-xs font-medium text-muted hover:border-accent hover:text-foreground transition-colors"
       aria-label={isHe ? 'Switch to English' : 'עבור לעברית'}
     >
       <span className="text-lg md:text-sm leading-none">{isHe ? '🇺🇸' : '🇮🇱'}</span>
       <span className="hidden md:inline">{isHe ? 'EN' : 'עב'}</span>
-    </button>
+    </a>
   );
 }

@@ -13,6 +13,7 @@ interface Props {
 type FormState = 'idle' | 'loading' | 'success' | 'error';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+const EMAIL = process.env.NEXT_PUBLIC_EMAIL;
 
 const WhatsAppIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -187,6 +188,21 @@ export default function Contact({ translations: t, lang }: Props) {
             </form>
           )}
         </Reveal>
+
+        {EMAIL && (
+          <Reveal delay={180}>
+            <p className="text-sm text-muted text-center mt-8">
+              {ct.emailPrefix}{' '}
+              <a
+                href={`mailto:${EMAIL}`}
+                className="font-medium underline underline-offset-4 transition-opacity hover:opacity-80"
+                style={{ color: 'var(--color-accent)' }}
+              >
+                {EMAIL}
+              </a>
+            </p>
+          </Reveal>
+        )}
 
       </div>
     </section>

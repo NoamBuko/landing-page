@@ -8,7 +8,7 @@ interface Props {
 
 export default function Hero({ translations: t }: Props) {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-[5vw] py-24 sm:py-28 text-center overflow-hidden">
+    <section className="relative min-h-dvh flex flex-col items-center justify-center px-[5vw] py-24 sm:py-28 text-center overflow-hidden">
       <Reveal delay={40}>
         <p
           className="font-semibold tracking-[0.22em] uppercase mb-5 sm:mb-7"

@@ -9,6 +9,18 @@ interface Props {
 export default function Work({ translations: t }: Props) {
   const w = t.work;
 
+  const liveButton = (
+    <a
+      href={w.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+      style={{ backgroundColor: 'var(--color-accent)' }}
+    >
+      {w.liveCta}
+    </a>
+  );
+
   return (
     <section id="work" className="py-20 sm:py-24 px-[5vw]">
       <div className="max-w-6xl mx-auto">
@@ -92,16 +104,9 @@ export default function Work({ translations: t }: Props) {
                 </div>
               </Reveal>
 
-              <Reveal delay={240}>
-                <a
-                  href={w.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: 'var(--color-accent)' }}
-                >
-                  {w.liveCta}
-                </a>
+              {/* Desktop: CTA stays at the end of the copy column */}
+              <Reveal delay={240} className="hidden lg:block">
+                {liveButton}
               </Reveal>
             </div>
 
@@ -131,6 +136,11 @@ export default function Work({ translations: t }: Props) {
                   />
                 </div>
               </div>
+            </Reveal>
+
+            {/* Mobile: CTA after the visuals so it's the final action */}
+            <Reveal delay={120} className="lg:hidden">
+              {liveButton}
             </Reveal>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { DM_Sans, Space_Grotesk } from 'next/font/google';
 import '../globals.css';
 import { t, type Lang } from '@/lib/translations';
+import { SITE_URL } from '@/lib/site';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -15,8 +16,6 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
   display: 'swap',
 });
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 function toLocale(lang: string): Lang | null {
   return lang === 'en' || lang === 'he' ? lang : null;

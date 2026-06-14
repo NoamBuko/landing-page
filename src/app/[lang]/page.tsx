@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { t, type Lang } from '@/lib/translations';
+import { SITE_URL } from '@/lib/site';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
@@ -9,8 +10,6 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'he' }];

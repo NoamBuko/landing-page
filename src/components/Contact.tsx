@@ -129,7 +129,7 @@ export default function Contact({ translations: t, lang }: Props) {
                 aria-hidden="true"
                 value={form.gotcha}
                 onChange={(e) => setForm((f) => ({ ...f, gotcha: e.target.value }))}
-                className="absolute -left-[9999px] w-px h-px opacity-0"
+                className="absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0 opacity-0 [clip:rect(0,0,0,0)]"
               />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

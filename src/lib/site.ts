@@ -14,3 +14,8 @@ function resolveSiteUrl(): string {
 }
 
 export const SITE_URL = resolveSiteUrl();
+
+// Public profiles used for JSON-LD `sameAs` — these tie the site to Noam's
+// online identity, a strong signal for a personal brand. Add full URLs as
+// they go live (e.g. 'https://www.linkedin.com/in/...', 'https://github.com/...').
+export const PROFILES: string[] = [];

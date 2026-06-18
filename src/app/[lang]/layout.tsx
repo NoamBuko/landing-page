@@ -42,7 +42,7 @@ export async function generateMetadata({
     description: m.description,
     alternates: {
       canonical: `/${locale}`,
-      languages: { en: '/en', he: '/he', 'x-default': '/' },
+      languages: { en: '/en', he: '/he', 'x-default': '/en' },
     },
     openGraph: {
       title: m.title,

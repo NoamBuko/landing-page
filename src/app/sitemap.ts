@@ -5,7 +5,11 @@ import { SITE_URL } from '@/lib/site';
 // alternates so crawlers understand they are the same page in en/he.
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  const languages = { en: `${SITE_URL}/en`, he: `${SITE_URL}/he` };
+  const languages = {
+    en: `${SITE_URL}/en`,
+    he: `${SITE_URL}/he`,
+    'x-default': `${SITE_URL}/en`,
+  };
 
   return (['en', 'he'] as const).map((locale) => ({
     url: `${SITE_URL}/${locale}`,

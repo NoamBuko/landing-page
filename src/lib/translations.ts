@@ -7,7 +7,7 @@ export const t = {
     meta: {
       title: 'Noam Bukobza — Custom Business Software & Automation',
       description:
-        'I build the custom software your business needs — from management systems that replace manual work to clean, fast websites and landing pages.',
+        'I build the custom software your business needs — from management systems that replace manual work to clean, fast websites and landing pages. Based in Beit Shemesh, Israel — available nationwide and remotely.',
     },
     nav: {
       work: 'My work',
@@ -69,7 +69,7 @@ export const t = {
       ],
       bilingual: 'Customer-facing site in English & Hebrew',
       liveCta: 'Visit the live site →',
-      liveUrl: 'https://order.prihadar.co.il',
+      liveUrl: 'https://prihadar.co.il',
       shotDashboardAlt: 'Admin dashboard',
       shotCalendarAlt: 'Delivery calendar',
     },
@@ -132,7 +132,8 @@ export const t = {
       errorMsg: 'Something went wrong. Please try again or message me on WhatsApp.',
     },
     footer: {
-      copyright: '© 2025 Noam Bukobza',
+      copyright: '© 2026 Noam Bukobza',
+      location: 'Beit Shemesh, Israel',
     },
   },
   he: {
@@ -140,7 +141,7 @@ export const t = {
     meta: {
       title: 'נועם בוקובזה — תוכנה מותאמת אישית לעסקים',
       description:
-        'אני בונה את התוכנה המותאמת אישית שהעסק שלכם צריך — ממערכות ניהול שמחליפות עבודה ידנית ועד אתרים ודפי נחיתה מהירים ונקיים.',
+        'אני בונה את התוכנה המותאמת אישית שהעסק שלכם צריך — ממערכות ניהול שמחליפות עבודה ידנית ועד אתרים ודפי נחיתה מהירים ונקיים. מבית שמש, ישראל — זמין לכל הארץ ובעבודה מרחוק.',
     },
     nav: {
       work: 'העבודות שלי',
@@ -202,7 +203,7 @@ export const t = {
       ],
       bilingual: 'אתר ההזמנות זמין באנגלית ובעברית',
       liveCta: 'בקרו באתר ←',
-      liveUrl: 'https://order.prihadar.co.il',
+      liveUrl: 'https://prihadar.co.il',
       shotDashboardAlt: 'דשבורד ניהול',
       shotCalendarAlt: 'יומן משלוחים',
     },
@@ -265,7 +266,8 @@ export const t = {
       errorMsg: 'משהו השתבש. נסו שוב או שלחו הודעה בוואטסאפ.',
     },
     footer: {
-      copyright: '© 2025 נועם בוקובזה',
+      copyright: '© 2026 נועם בוקובזה',
+      location: 'בית שמש, ישראל',
     },
   },
 } as const;

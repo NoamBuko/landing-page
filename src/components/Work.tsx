@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { type Translations } from '@/lib/translations';
+import PhoneShot from './PhoneShot';
 import Reveal from './Reveal';
 
 interface Props {
@@ -31,14 +32,24 @@ export default function Work({ translations: t }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
           {w.projects.map((p, i) => (
             <Reveal key={p.image} delay={i * 100}>
-              <div className="relative aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-lg bg-white mb-4">
-                <Image
-                  src={p.image}
-                  alt={`${p.client} — ${p.industry}`}
-                  fill
-                  sizes="(min-width: 768px) 30vw, 90vw"
-                  className="object-cover object-top"
-                />
+              {/* Desktop screenshot with the phone version overlapping its corner */}
+              <div className="relative pb-8 mb-4">
+                <div className="relative w-[85%] aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-lg bg-white">
+                  <Image
+                    src={p.image}
+                    alt={`${p.client} — ${p.industry}`}
+                    fill
+                    sizes="(min-width: 768px) 26vw, 80vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="absolute end-0 bottom-0 w-[24%]">
+                  <PhoneShot
+                    src={p.mobileImage}
+                    alt={`${p.client} — ${p.industry} (mobile)`}
+                    sizes="(min-width: 768px) 8vw, 25vw"
+                  />
+                </div>
               </div>
               <div className="flex items-baseline gap-2 flex-wrap mb-1">
                 <h3

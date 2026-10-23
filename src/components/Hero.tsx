@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { type Translations } from '@/lib/translations';
+import PhoneShot from './PhoneShot';
 import Reveal from './Reveal';
 import ScrollHint from './ScrollHint';
 
@@ -26,17 +27,6 @@ function BrowserShot({ src, alt, eager = false }: { src: string; alt: string; ea
           fetchPriority={eager ? 'high' : 'auto'}
           className="object-cover object-top"
         />
-      </div>
-    </div>
-  );
-}
-
-// A phone frame around a mobile screenshot of a client page.
-function PhoneShot({ src, alt }: { src: string; alt: string }) {
-  return (
-    <div className="rounded-[1.1rem] p-[3px] bg-foreground shadow-2xl shadow-black/25">
-      <div className="relative aspect-[645/1200] rounded-[0.9rem] overflow-hidden bg-white">
-        <Image src={src} alt={alt} fill sizes="30vw" className="object-cover object-top" />
       </div>
     </div>
   );
@@ -120,10 +110,10 @@ export default function Hero({ translations: t }: Props) {
             <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
           </div>
           <div className="absolute left-0 top-10 w-[27%] -rotate-6 z-10">
-            <PhoneShot src="/work/sharar-mobile.jpg" alt={`${left.client} — ${left.industry}`} />
+            <PhoneShot src={left.mobileImage} alt={`${left.client} — ${left.industry}`} sizes="30vw" />
           </div>
           <div className="absolute right-0 top-10 w-[27%] rotate-6 z-10">
-            <PhoneShot src="/work/mega-afar-mobile.jpg" alt={`${right.client} — ${right.industry}`} />
+            <PhoneShot src={right.mobileImage} alt={`${right.client} — ${right.industry}`} sizes="30vw" />
           </div>
         </div>
 

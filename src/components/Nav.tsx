@@ -55,7 +55,7 @@ export default function Nav({ translations: t, lang }: Props) {
             Noam Bukobza
           </span>
           <span className="text-xs font-medium uppercase tracking-widest whitespace-nowrap" style={{ color: 'var(--color-accent)' }}>
-            {isHe ? 'מפתח תוכנה' : 'Software Developer'}
+            {isHe ? 'דפי נחיתה' : 'Landing Pages'}
           </span>
         </span>
       </button>

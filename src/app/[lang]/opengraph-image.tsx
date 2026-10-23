@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-export const alt = 'Noam Bukobza — Software Developer';
+export const alt = 'Noam Bukobza — Landing Pages';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -11,7 +11,7 @@ export function generateStaticParams() {
 }
 
 // On-brand share card reproducing the site's nav brand lockup at full
-// resolution: the green "NB" monogram + "Noam Bukobza" / "SOFTWARE DEVELOPER".
+// resolution: the green "NB" monogram + "Noam Bukobza" / "LANDING PAGES".
 // Uses the site's own fonts — Space Grotesk (display) for the name and DM Sans
 // for the subtitle. Kept in Latin so it renders without a Hebrew font, while
 // the per-locale og:title/description carry the language.
@@ -75,7 +75,7 @@ export default async function Image() {
               fontWeight: 500,
             }}
           >
-            SOFTWARE DEVELOPER
+            LANDING PAGES
           </div>
         </div>
       </div>

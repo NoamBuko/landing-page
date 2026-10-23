@@ -124,8 +124,8 @@ export const t = {
           a: "Yes. The page and the domain are yours. I host it for you at no monthly cost, and if you ever want to move it, I'll hand everything over.",
         },
         {
-          q: "Do you also build bigger systems?",
-          a: "Yes. If your business needs more than a page, like online ordering, scheduling or a management system, I build those too.",
+          q: "Can't I just build it myself with AI or Wix?",
+          a: "You can. But you'd still need to write the text, design it, buy and connect a domain, set up hosting and make sure Google can find you. With me you have one short chat and I handle everything. You also get a real person to call when you want a change.",
         },
       ],
     },
@@ -279,8 +279,8 @@ export const t = {
           a: "כן. הדף והדומיין שלך. אני מארח אותו בשבילך בלי עלות חודשית, ואם תרצה להעביר אותו למקום אחר, אעביר לך הכל.",
         },
         {
-          q: "אתה בונה גם מערכות גדולות יותר?",
-          a: "כן. אם העסק שלך צריך יותר מדף, כמו הזמנות אונליין, ניהול תורים או מערכת ניהול, אני בונה גם את זה.",
+          q: "אני לא יכול פשוט לבנות את זה לבד עם AI או Wix?",
+          a: "אפשר. אבל עדיין תצטרך לכתוב את הטקסטים, לעצב, לקנות ולחבר דומיין, לדאוג לאחסון ולוודא שגוגל מוצא אותך. איתי זו שיחה קצרה אחת ואני דואג להכל. ויש לך גם בן אדם אמיתי להתקשר אליו כשתרצה שינוי.",
         },
       ],
     },

@@ -141,6 +141,7 @@ export const t = {
       msgPlaceholder: "A question, a detail, or whatever's on your mind...",
       submitBtn: 'Send message',
       orWhatsapp: 'Message me on WhatsApp',
+      orCall: 'Call me',
       emailPrefix: 'Prefer email?',
       whatsappMessage: "Hi Noam, I came from your website and I'm interested in a landing page.",
       noCommit: 'No commitment. Just a conversation.',
@@ -151,6 +152,9 @@ export const t = {
     footer: {
       copyright: '© 2026 Noam Bukobza',
       location: 'Beit Shemesh, Israel',
+      tagline: 'Landing pages for businesses in Israel.',
+      contactHeading: 'Contact',
+      callAria: 'Call Noam',
     },
   },
   he: {
@@ -292,6 +296,7 @@ export const t = {
       msgPlaceholder: 'שאלה, פרט קטן, או כל מה שעולה לך בראש...',
       submitBtn: 'שלח הודעה',
       orWhatsapp: 'שלח הודעה בוואטסאפ',
+      orCall: 'התקשר אליי',
       emailPrefix: 'מעדיף מייל?',
       whatsappMessage: 'היי נועם, הגעתי מהאתר ואני מתעניין בדף נחיתה.',
       noCommit: 'ללא התחייבות. רק שיחה.',
@@ -302,6 +307,9 @@ export const t = {
     footer: {
       copyright: '© 2026 נועם בוקובזה',
       location: 'בית שמש, ישראל',
+      tagline: 'דפי נחיתה לעסקים בישראל.',
+      contactHeading: 'יצירת קשר',
+      callAria: 'התקשר לנועם',
     },
   },
 } as const;

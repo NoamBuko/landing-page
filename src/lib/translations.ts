@@ -5,9 +5,9 @@ export const t = {
   en: {
     dir: 'ltr' as const,
     meta: {
-      title: 'Noam Bukobza — Custom Business Software & Automation',
+      title: 'Landing Pages for Businesses in Israel | Noam Bukobza',
       description:
-        'I build the custom software your business needs — from management systems that replace manual work to clean, fast websites and landing pages. Based in Beit Shemesh, Israel — available nationwide and remotely.',
+        'A custom landing page that brings you customers, for a fixed 2,000₪. Written, designed and live in 1–2 weeks. Based in Beit Shemesh, working across Israel.',
     },
     nav: {
       work: 'My work',
@@ -153,9 +153,9 @@ export const t = {
   he: {
     dir: 'rtl' as const,
     meta: {
-      title: 'נועם בוקובזה — תוכנה מותאמת אישית לעסקים',
+      title: 'בניית דפי נחיתה לעסקים | נועם בוקובזה',
       description:
-        'אני בונה את התוכנה המותאמת אישית שהעסק שלכם צריך — ממערכות ניהול שמחליפות עבודה ידנית ועד אתרים ודפי נחיתה מהירים ונקיים. מבית שמש, ישראל — זמין לכל הארץ ובעבודה מרחוק.',
+        'דף נחיתה מותאם אישית שמביא לך לקוחות, במחיר קבוע של 2,000₪. כתיבה, עיצוב ועלייה לאוויר תוך שבוע–שבועיים. מבית שמש, לכל הארץ.',
     },
     nav: {
       work: 'העבודות שלי',

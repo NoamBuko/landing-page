@@ -129,13 +129,13 @@ export default function Hero({ translations: t }: Props) {
 
         {/* Desktop: three browser windows, fanned out */}
         <div className="hidden sm:block relative w-full max-w-5xl mx-auto mt-20" dir="ltr">
-          <div className="absolute left-0 top-10 w-[46%] -rotate-3">
+          <div className="absolute left-0 top-10 w-[46%] -rotate-3 transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-105">
             <BrowserShot src={left.image} alt={`${left.client} — ${left.industry}`} />
           </div>
-          <div className="absolute right-0 top-10 w-[46%] rotate-3">
+          <div className="absolute right-0 top-10 w-[46%] rotate-3 transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-105">
             <BrowserShot src={right.image} alt={`${right.client} — ${right.industry}`} />
           </div>
-          <div className="relative z-10 mx-auto w-[60%]">
+          <div className="relative z-10 mx-auto w-[60%] transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-105">
             <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
           </div>
         </div>

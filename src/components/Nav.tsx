@@ -24,8 +24,8 @@ export default function Nav({ translations: t, lang }: Props) {
   };
 
   const navLinks = [
-    { label: t.nav.work, id: 'work' },
     { label: t.nav.process, id: 'process' },
+    { label: t.nav.work, id: 'work' },
     { label: t.nav.about, id: 'about' },
     { label: t.nav.faq, id: 'faq' },
   ];

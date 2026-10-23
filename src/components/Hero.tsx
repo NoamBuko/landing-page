@@ -31,6 +31,17 @@ function BrowserShot({ src, alt, eager = false }: { src: string; alt: string; ea
   );
 }
 
+// A phone frame around a mobile screenshot of a client page.
+function PhoneShot({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="rounded-[1.1rem] p-[3px] bg-foreground shadow-2xl shadow-black/25">
+      <div className="relative aspect-[645/1200] rounded-[0.9rem] overflow-hidden bg-white">
+        <Image src={src} alt={alt} fill sizes="30vw" className="object-cover object-top" />
+      </div>
+    </div>
+  );
+}
+
 export default function Hero({ translations: t }: Props) {
   const [left, center, right] = t.work.projects;
 
@@ -103,14 +114,28 @@ export default function Hero({ translations: t }: Props) {
 
       {/* Client pages, fanned out */}
       <Reveal delay={300} className="w-full">
-        <div className="relative w-full max-w-5xl mx-auto mt-14 sm:mt-20" dir="ltr">
-          <div className="hidden sm:block absolute left-0 top-10 w-[46%] -rotate-3">
+        {/* Mobile: browser in the middle, phones overlapping its sides */}
+        <div className="sm:hidden relative w-full mt-14 pb-6" dir="ltr">
+          <div className="mx-auto w-[82%]">
+            <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
+          </div>
+          <div className="absolute left-0 top-10 w-[27%] -rotate-6 z-10">
+            <PhoneShot src="/work/sharar-mobile.jpg" alt={`${left.client} — ${left.industry}`} />
+          </div>
+          <div className="absolute right-0 top-10 w-[27%] rotate-6 z-10">
+            <PhoneShot src="/work/mega-afar-mobile.jpg" alt={`${right.client} — ${right.industry}`} />
+          </div>
+        </div>
+
+        {/* Desktop: three browser windows, fanned out */}
+        <div className="hidden sm:block relative w-full max-w-5xl mx-auto mt-20" dir="ltr">
+          <div className="absolute left-0 top-10 w-[46%] -rotate-3">
             <BrowserShot src={left.image} alt={`${left.client} — ${left.industry}`} />
           </div>
-          <div className="hidden sm:block absolute right-0 top-10 w-[46%] rotate-3">
+          <div className="absolute right-0 top-10 w-[46%] rotate-3">
             <BrowserShot src={right.image} alt={`${right.client} — ${right.industry}`} />
           </div>
-          <div className="relative z-10 mx-auto w-full sm:w-[60%]">
+          <div className="relative z-10 mx-auto w-[60%]">
             <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
           </div>
         </div>

@@ -7,11 +7,42 @@ interface Props {
   translations: Translations;
 }
 
+// Per-card tilt: a slight alternating lean when stacked on mobile, a fan (center card raised) on desktop.
+const FAN = [
+  '-rotate-1 md:-rotate-3 md:mt-10 md:hover:scale-105',
+  'rotate-1 md:rotate-0 md:z-10 md:scale-[1.08] md:hover:scale-[1.12]',
+  '-rotate-1 md:rotate-3 md:mt-10 md:hover:scale-105',
+];
+
+// A browser-window frame around a client page screenshot.
+function BrowserShot({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
+  return (
+    <div className="rounded-xl overflow-hidden bg-white ring-1 ring-border shadow-2xl shadow-black/15">
+      <div className="flex items-center gap-1.5 h-6 px-3 bg-[var(--color-border)]/60">
+        <span className="w-2 h-2 rounded-full bg-foreground/15" />
+        <span className="w-2 h-2 rounded-full bg-foreground/15" />
+        <span className="w-2 h-2 rounded-full bg-foreground/15" />
+      </div>
+      <div className="relative aspect-[1600/865]">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(min-width: 768px) 26vw, 80vw"
+          loading={eager ? 'eager' : 'lazy'}
+          fetchPriority={eager ? 'high' : 'auto'}
+          className="object-cover object-top"
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function Work({ translations: t }: Props) {
   const w = t.work;
 
   return (
-    <section id="work" className="py-20 sm:py-24 px-[5vw]">
+    <section id="work" className="pt-16 sm:pt-20 pb-20 sm:pb-24 px-[5vw]">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p
@@ -28,45 +59,43 @@ export default function Work({ translations: t }: Props) {
           </h2>
         </Reveal>
 
-        {/* Landing pages */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
-          {w.projects.map((p, i) => (
-            <Reveal key={p.image} delay={i * 100}>
-              {/* Desktop screenshot with the phone version overlapping its corner */}
-              <div className="relative pb-8 mb-4">
-                <div className="relative w-[85%] aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-lg bg-white">
-                  <Image
-                    src={p.image}
-                    alt={`${p.client} — ${p.industry}`}
-                    fill
-                    sizes="(min-width: 768px) 26vw, 80vw"
-                    className="object-cover object-top"
-                  />
+        {/* Landing pages, fanned out on desktop; hovering one straightens it and brings it to the front */}
+        <Reveal delay={100}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-5" dir="ltr">
+            {w.projects.map((p, i) => (
+              <div key={p.image} className={`transition-transform duration-300 md:hover:z-20 md:hover:rotate-0 ${FAN[i]}`}>
+                {/* Desktop screenshot with the phone version overlapping its corner */}
+                <div className="relative pb-8 mb-4">
+                  <div className="w-[85%]">
+                    <BrowserShot
+                      src={p.image}
+                      alt={`${p.client} — ${p.industry}`}
+                      eager={i === 1}
+                    />
+                  </div>
+                  <div className="absolute right-0 bottom-0 w-[24%]">
+                    <PhoneShot
+                      src={p.mobileImage}
+                      alt={`${p.client} — ${p.industry} (mobile)`}
+                      sizes="(min-width: 768px) 8vw, 25vw"
+                    />
+                  </div>
                 </div>
-                <div className="absolute end-0 bottom-0 w-[24%]">
-                  <PhoneShot
-                    src={p.mobileImage}
-                    alt={`${p.client} — ${p.industry} (mobile)`}
-                    sizes="(min-width: 768px) 8vw, 25vw"
-                  />
+                <div dir={t.dir}>
+                  <div className="flex items-baseline gap-2 flex-wrap mb-1">
+                    <h3
+                      className="text-lg font-semibold text-foreground"
+                      style={{ fontFamily: 'var(--font-display)' }}
+                    >
+                      {p.client}
+                    </h3>
+                    <span className="text-sm text-muted">· {p.industry}</span>
+                  </div>
+                  <p className="text-sm text-muted leading-relaxed">{p.line}</p>
                 </div>
               </div>
-              <div className="flex items-baseline gap-2 flex-wrap mb-1">
-                <h3
-                  className="text-lg font-semibold text-foreground"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {p.client}
-                </h3>
-                <span className="text-sm text-muted">· {p.industry}</span>
-              </div>
-              <p className="text-sm text-muted leading-relaxed">{p.line}</p>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={300}>
-          <p className="text-sm text-muted text-center mt-10">{w.selfNote}</p>
+            ))}
+          </div>
         </Reveal>
 
         {/* Bigger projects: Pri Hadar */}

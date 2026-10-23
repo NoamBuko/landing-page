@@ -1,42 +1,13 @@
-import Image from 'next/image';
 import { type Translations } from '@/lib/translations';
-import PhoneShot from './PhoneShot';
 import Reveal from './Reveal';
-import ScrollHint from './ScrollHint';
 
 interface Props {
   translations: Translations;
 }
 
-// A browser-window frame around a client page screenshot.
-function BrowserShot({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
-  return (
-    <div className="rounded-xl overflow-hidden bg-white ring-1 ring-border shadow-2xl shadow-black/15">
-      <div className="flex items-center gap-1.5 h-6 px-3 bg-[var(--color-border)]/60" dir="ltr">
-        <span className="w-2 h-2 rounded-full bg-foreground/15" />
-        <span className="w-2 h-2 rounded-full bg-foreground/15" />
-        <span className="w-2 h-2 rounded-full bg-foreground/15" />
-      </div>
-      <div className="relative aspect-[16/10]">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes="(min-width: 640px) 50vw, 100vw"
-          loading={eager ? 'eager' : 'lazy'}
-          fetchPriority={eager ? 'high' : 'auto'}
-          className="object-cover object-top"
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function Hero({ translations: t }: Props) {
-  const [left, center, right] = t.work.projects;
-
   return (
-    <section className="relative min-h-dvh flex flex-col items-center justify-center px-[5vw] py-24 sm:py-28 text-center overflow-hidden">
+    <section className="relative flex flex-col items-center px-[5vw] pt-32 sm:pt-40 pb-4 sm:pb-8 text-center">
       <Reveal delay={40}>
         <p
           className="font-semibold tracking-[0.22em] uppercase mb-5 sm:mb-7"
@@ -101,37 +72,6 @@ export default function Hero({ translations: t }: Props) {
           ))}
         </ul>
       </Reveal>
-
-      {/* Client pages, fanned out */}
-      <Reveal delay={300} className="w-full">
-        {/* Mobile: browser in the middle, phones overlapping its sides */}
-        <div className="sm:hidden relative w-full mt-14 pb-6" dir="ltr">
-          <div className="mx-auto w-[82%]">
-            <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
-          </div>
-          <div className="absolute left-0 top-10 w-[27%] -rotate-6 z-10">
-            <PhoneShot src={left.mobileImage} alt={`${left.client} — ${left.industry}`} sizes="30vw" />
-          </div>
-          <div className="absolute right-0 top-10 w-[27%] rotate-6 z-10">
-            <PhoneShot src={right.mobileImage} alt={`${right.client} — ${right.industry}`} sizes="30vw" />
-          </div>
-        </div>
-
-        {/* Desktop: three browser windows, fanned out */}
-        <div className="hidden sm:block relative w-full max-w-5xl mx-auto mt-20" dir="ltr">
-          <div className="absolute left-0 top-10 w-[46%] -rotate-3 transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-105">
-            <BrowserShot src={left.image} alt={`${left.client} — ${left.industry}`} />
-          </div>
-          <div className="absolute right-0 top-10 w-[46%] rotate-3 transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-105">
-            <BrowserShot src={right.image} alt={`${right.client} — ${right.industry}`} />
-          </div>
-          <div className="relative z-10 mx-auto w-[60%] transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-105">
-            <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
-          </div>
-        </div>
-      </Reveal>
-
-      <ScrollHint label={t.hero.scrollHint} />
     </section>
   );
 }

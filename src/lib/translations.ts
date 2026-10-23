@@ -25,7 +25,6 @@ export const t = {
       cta1: 'Get your landing page →',
       cta2: 'See my work',
       stats: ['2,000₪ fixed price', 'Live in 1–2 weeks', 'No monthly fees'],
-      scrollHint: 'Scroll to see more',
     },
     howItWorks: {
       label: 'How it works',
@@ -79,7 +78,6 @@ export const t = {
           mobileImage: '/work/mega-afar-mobile.jpg',
         },
       ],
-      selfNote: "And you're looking at one right now.",
       more: {
         h3: 'Need more than a page?',
         desc: "I also build full systems, like Pri Hadar's online ordering and delivery management.",
@@ -178,7 +176,6 @@ export const t = {
       cta1: 'אני רוצה דף נחיתה ←',
       cta2: 'לעבודות שלי',
       stats: ['מחיר קבוע 2,000₪', 'באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
-      scrollHint: 'גלול כדי לראות עוד',
     },
     howItWorks: {
       label: 'איך זה עובד',
@@ -232,7 +229,6 @@ export const t = {
           mobileImage: '/work/mega-afar-mobile.jpg',
         },
       ],
-      selfNote: 'ואתה מסתכל על אחד מהם ממש עכשיו.',
       more: {
         h3: 'צריך יותר מדף?',
         desc: 'אני בונה גם מערכות מלאות, כמו מערכת ההזמנות וניהול המשלוחים של פרי הדר.',

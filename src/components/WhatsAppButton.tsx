@@ -10,7 +10,7 @@ interface Props {
 
 export default function WhatsAppButton({ lang }: Props) {
   const [hovered, setHovered] = useState(false);
-  const label = lang === 'he' ? 'שלחו הודעה בוואטסאפ' : 'Message on WhatsApp';
+  const label = lang === 'he' ? 'שלח הודעה בוואטסאפ' : 'Message on WhatsApp';
   const message = encodeURIComponent(t[lang].contact.whatsappMessage);
 
   return (

@@ -22,7 +22,8 @@ export const t = {
       h1Accent: 'brings you customers.',
       sub: 'People find you, like what they see, and reach out. Simple as that.',
       cta1: 'Get your landing page →',
-      cta2: 'How it works',
+      cta2: 'See my work',
+      stats: ['2,000₪ fixed price', 'Live in 1–2 weeks', 'No monthly fees'],
       scrollHint: 'Scroll to see more',
     },
     howItWorks: {
@@ -118,7 +119,7 @@ export const t = {
         },
         {
           q: "Do I own the page?",
-          a: "Completely. The page, the domain and every account it runs on are in your name, never mine.",
+          a: "Yes. The page and the domain are yours. I host it for you at no monthly cost, and if you ever want to move it, I'll hand everything over.",
         },
         {
           q: "Do you also build bigger systems?",
@@ -170,8 +171,9 @@ export const t = {
       h1Accent: 'שמביא לך לקוחות.',
       sub: 'אנשים מוצאים אותך, אוהבים את מה שהם רואים ופונים אליך. ככה פשוט.',
       cta1: 'אני רוצה דף נחיתה ←',
-      cta2: 'איך זה עובד',
-      scrollHint: 'גללו כדי לראות עוד',
+      cta2: 'לעבודות שלי',
+      stats: ['מחיר קבוע 2,000₪', 'באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
+      scrollHint: 'גלול כדי לראות עוד',
     },
     howItWorks: {
       label: 'איך זה עובד',
@@ -266,7 +268,7 @@ export const t = {
         },
         {
           q: "הדף בבעלותי?",
-          a: "לחלוטין. הדף, הדומיין וכל חשבון שהוא רץ עליו רשומים על שמך, אף פעם לא על שמי.",
+          a: "כן. הדף והדומיין שלך. אני מארח אותו בשבילך בלי עלות חודשית, ואם תרצה להעביר אותו למקום אחר, אעביר לך הכל.",
         },
         {
           q: "אתה בונה גם מערכות גדולות יותר?",

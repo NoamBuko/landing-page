@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { type Translations } from '@/lib/translations';
 import Reveal from './Reveal';
 import ScrollHint from './ScrollHint';
@@ -6,7 +7,33 @@ interface Props {
   translations: Translations;
 }
 
+// A browser-window frame around a client page screenshot.
+function BrowserShot({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
+  return (
+    <div className="rounded-xl overflow-hidden bg-white ring-1 ring-border shadow-2xl shadow-black/15">
+      <div className="flex items-center gap-1.5 h-6 px-3 bg-[var(--color-border)]/60" dir="ltr">
+        <span className="w-2 h-2 rounded-full bg-foreground/15" />
+        <span className="w-2 h-2 rounded-full bg-foreground/15" />
+        <span className="w-2 h-2 rounded-full bg-foreground/15" />
+      </div>
+      <div className="relative aspect-[16/10]">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(min-width: 640px) 50vw, 100vw"
+          loading={eager ? 'eager' : 'lazy'}
+          fetchPriority={eager ? 'high' : 'auto'}
+          className="object-cover object-top"
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function Hero({ translations: t }: Props) {
+  const [left, center, right] = t.work.projects;
+
   return (
     <section className="relative min-h-dvh flex flex-col items-center justify-center px-[5vw] py-24 sm:py-28 text-center overflow-hidden">
       <Reveal delay={40}>
@@ -53,11 +80,39 @@ export default function Hero({ translations: t }: Props) {
             {t.hero.cta1}
           </a>
           <a
-            href="#process"
+            href="#work"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-foreground border border-border hover:border-accent transition-colors"
           >
             {t.hero.cta2}
           </a>
+        </div>
+      </Reveal>
+
+      <Reveal delay={240}>
+        <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-7 text-sm font-medium text-muted">
+          {t.hero.stats.map((stat) => (
+            <li key={stat} className="flex items-center gap-1.5">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden style={{ color: 'var(--color-accent)' }}>
+                <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              {stat}
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+
+      {/* Client pages, fanned out */}
+      <Reveal delay={300} className="w-full">
+        <div className="relative w-full max-w-5xl mx-auto mt-14 sm:mt-20" dir="ltr">
+          <div className="hidden sm:block absolute left-0 top-10 w-[46%] -rotate-3">
+            <BrowserShot src={left.image} alt={`${left.client} — ${left.industry}`} />
+          </div>
+          <div className="hidden sm:block absolute right-0 top-10 w-[46%] rotate-3">
+            <BrowserShot src={right.image} alt={`${right.client} — ${right.industry}`} />
+          </div>
+          <div className="relative z-10 mx-auto w-full sm:w-[60%]">
+            <BrowserShot src={center.image} alt={`${center.client} — ${center.industry}`} eager />
+          </div>
         </div>
       </Reveal>
 

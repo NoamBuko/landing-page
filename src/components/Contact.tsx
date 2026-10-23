@@ -135,8 +135,9 @@ export default function Contact({ translations: t, lang }: Props) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className={labelClass}>{ct.nameLabel}</label>
+                  <label htmlFor="contact-name" className={labelClass}>{ct.nameLabel}</label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
                     placeholder={ct.namePlaceholder}
@@ -146,8 +147,9 @@ export default function Contact({ translations: t, lang }: Props) {
                   />
                 </div>
                 <div>
-                  <label className={labelClass}>{ct.phoneLabel}</label>
+                  <label htmlFor="contact-phone" className={labelClass}>{ct.phoneLabel}</label>
                   <input
+                    id="contact-phone"
                     type="tel"
                     required
                     inputMode="tel"
@@ -160,8 +162,9 @@ export default function Contact({ translations: t, lang }: Props) {
               </div>
 
               <div>
-                <label className={labelClass}>{ct.msgLabel}</label>
+                <label htmlFor="contact-msg" className={labelClass}>{ct.msgLabel}</label>
                 <textarea
+                  id="contact-msg"
                   rows={4}
                   placeholder={ct.msgPlaceholder}
                   value={form.msg}

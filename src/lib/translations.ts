@@ -11,6 +11,7 @@ export const t = {
     },
     nav: {
       work: 'My work',
+      process: 'How it works',
       about: 'About me',
       faq: 'FAQ',
       contact: 'Contact',
@@ -160,6 +161,7 @@ export const t = {
     },
     nav: {
       work: 'העבודות שלי',
+      process: 'איך זה עובד',
       about: 'אודותיי',
       faq: 'שאלות נפוצות',
       contact: 'צור קשר',

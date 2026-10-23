@@ -101,8 +101,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Nav translations={tr} lang={locale} />
       <main>
         <Hero translations={tr} />
-        <HowItWorks translations={tr} />
         <Work translations={tr} />
+        <HowItWorks translations={tr} />
         <About translations={tr} />
         <FAQ translations={tr} />
         <Contact translations={tr} lang={locale} />

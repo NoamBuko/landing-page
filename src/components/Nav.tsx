@@ -25,6 +25,7 @@ export default function Nav({ translations: t, lang }: Props) {
 
   const navLinks = [
     { label: t.nav.work, id: 'work' },
+    { label: t.nav.process, id: 'process' },
     { label: t.nav.about, id: 'about' },
     { label: t.nav.faq, id: 'faq' },
   ];
@@ -61,7 +62,7 @@ export default function Nav({ translations: t, lang }: Props) {
       </button>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center gap-8">
+      <div className="hidden md:flex items-center gap-5 lg:gap-8">
         {navLinks.map((link) => (
           <button
             key={link.id}
@@ -104,7 +105,7 @@ export default function Nav({ translations: t, lang }: Props) {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className={`absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border py-4 flex flex-col items-${isHe ? 'end' : 'start'} px-[5vw] gap-4 md:hidden`}
+          className={`absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border py-4 flex flex-col items-start px-[5vw] gap-4 md:hidden`}
         >
           {navLinks.map((link) => (
             <button

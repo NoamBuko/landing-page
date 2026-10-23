@@ -53,7 +53,7 @@ export default function Hero({ translations: t }: Props) {
             {t.hero.cta1}
           </a>
           <a
-            href="#work"
+            href="#process"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-foreground border border-border hover:border-accent transition-colors"
           >
             {t.hero.cta2}

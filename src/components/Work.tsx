@@ -9,141 +9,89 @@ interface Props {
 export default function Work({ translations: t }: Props) {
   const w = t.work;
 
-  const liveButton = (
-    <a
-      href={w.liveUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
-      style={{ backgroundColor: 'var(--color-accent)' }}
-    >
-      {w.liveCta}
-    </a>
-  );
-
   return (
     <section id="work" className="py-20 sm:py-24 px-[5vw]">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p
-            className="text-xs font-semibold uppercase tracking-widest mb-6"
+            className="text-xs font-semibold uppercase tracking-widest mb-3"
             style={{ color: 'var(--color-accent)' }}
           >
             {w.label}
           </p>
+          <h2
+            className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-12"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            {w.h2}
+          </h2>
         </Reveal>
 
-        <div className="rounded-3xl bg-[var(--color-accent-light)]/50 border border-border p-6 sm:p-10 lg:p-14">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            {/* Copy */}
-            <div>
-              <Reveal delay={60}>
-                <div className="flex items-baseline gap-2 sm:gap-3 mb-2 flex-wrap">
-                  <h3
-                    className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground"
-                    style={{ fontFamily: 'var(--font-display)' }}
-                  >
-                    {w.client}
-                  </h3>
-                  <span className="text-sm text-muted">· {w.tagline}</span>
-                </div>
-                <h2
-                  className="text-xl sm:text-2xl font-semibold leading-snug mb-4"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-accent)' }}
-                >
-                  {w.h2}
-                </h2>
-                <p className="text-base text-muted leading-relaxed mb-6 max-w-md">{w.desc}</p>
-              </Reveal>
-
-              <Reveal delay={120}>
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6 max-w-md">
-                  {w.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-foreground">
-                      <span
-                        className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                        style={{ backgroundColor: 'var(--color-accent)' }}
-                      />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                  <li className="col-span-2 flex items-center gap-2 text-sm text-foreground">
-                    <span
-                      className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ backgroundColor: 'var(--color-accent)' }}
-                    />
-                    <span>{w.bilingual}</span>
-                  </li>
-                </ul>
-              </Reveal>
-
-              <Reveal delay={180}>
-                <div className="flex flex-col gap-2.5 mb-6 pt-5 border-t border-border/70">
-                  {w.impact.map((it) => (
-                    <div key={it.label} className="flex items-center gap-2.5">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        aria-hidden
-                        className="shrink-0"
-                        style={{ color: 'var(--color-accent)' }}
-                      >
-                        <path
-                          d="M3 8l3.5 3.5L13 5"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span className="text-sm font-medium text-foreground">{it.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-
-              {/* Desktop: CTA stays at the end of the copy column */}
-              <Reveal delay={240} className="hidden lg:block">
-                {liveButton}
-              </Reveal>
-            </div>
-
-            {/* Visuals */}
-            <Reveal delay={140}>
-              <div className="relative">
-                {/* Main: admin dashboard */}
-                <div className="relative aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-xl bg-white">
-                  <Image
-                    src="/work/dashboard.png"
-                    alt={w.shotDashboardAlt}
-                    fill
-                    sizes="(min-width: 1024px) 45vw, 90vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-                {/* Secondary: calendar
-                    mobile: smaller card stacked below, pushed to end
-                    desktop: absolute, overlapping bottom-end corner */}
-                <div className="mt-4 w-full relative aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-2xl bg-white lg:mt-0 lg:absolute lg:bottom-[-14%] lg:end-[-6%] lg:w-[55%]">
-                  <Image
-                    src="/work/calendar.png"
-                    alt={w.shotCalendarAlt}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, 55vw"
-                    className="object-cover object-top"
-                  />
-                </div>
+        {/* Landing pages */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+          {w.projects.map((p, i) => (
+            <Reveal key={p.image} delay={i * 100}>
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-lg bg-white mb-4">
+                <Image
+                  src={p.image}
+                  alt={`${p.client} — ${p.industry}`}
+                  fill
+                  sizes="(min-width: 768px) 30vw, 90vw"
+                  className="object-cover object-top"
+                />
               </div>
+              <div className="flex items-baseline gap-2 flex-wrap mb-1">
+                <h3
+                  className="text-lg font-semibold text-foreground"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  {p.client}
+                </h3>
+                <span className="text-sm text-muted">· {p.industry}</span>
+              </div>
+              <p className="text-sm text-muted leading-relaxed">{p.line}</p>
             </Reveal>
-
-            {/* Mobile: CTA after the visuals so it's the final action */}
-            <Reveal delay={120} className="lg:hidden">
-              {liveButton}
-            </Reveal>
-          </div>
+          ))}
         </div>
+
+        <Reveal delay={300}>
+          <p className="text-sm text-muted text-center mt-10">{w.selfNote}</p>
+        </Reveal>
+
+        {/* Bigger projects: Pri Hadar */}
+        <Reveal delay={120}>
+          <div className="mt-16 rounded-3xl bg-[var(--color-accent-light)]/50 border border-border p-6 sm:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_minmax(0,22rem)] gap-8 items-center">
+              <div>
+                <h3
+                  className="text-2xl font-bold tracking-tight text-foreground mb-2"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  {w.more.h3}
+                </h3>
+                <p className="text-base text-muted leading-relaxed mb-6 max-w-md">{w.more.desc}</p>
+                <a
+                  href={w.more.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: 'var(--color-accent)' }}
+                >
+                  {w.more.liveCta}
+                </a>
+              </div>
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-border shadow-xl bg-white">
+                <Image
+                  src="/work/dashboard.png"
+                  alt={w.more.shotAlt}
+                  fill
+                  sizes="(min-width: 768px) 22rem, 90vw"
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

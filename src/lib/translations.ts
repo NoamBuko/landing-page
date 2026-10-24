@@ -57,23 +57,17 @@ export const t = {
       h2: "Landing pages I've built.",
       projects: [
         {
-          client: 'Yisrael Sherrer',
           industry: 'Construction management',
-          line: 'Builds trust before the first call.',
           image: '/work/sharar.jpg',
           mobileImage: '/work/sharar-mobile.jpg',
         },
         {
-          client: 'Aircor',
           industry: 'Air conditioning',
-          line: 'One tap to call or WhatsApp.',
           image: '/work/aircor.jpg',
           mobileImage: '/work/aircor-mobile.jpg',
         },
         {
-          client: 'Mega Afar',
           industry: 'Earthworks & infrastructure',
-          line: 'Bold, confident and built for quote requests.',
           image: '/work/mega-afar.jpg',
           mobileImage: '/work/mega-afar-mobile.jpg',
         },
@@ -212,23 +206,17 @@ export const t = {
       h2: 'דפי נחיתה שבניתי.',
       projects: [
         {
-          client: 'ישראל שרר',
           industry: 'ניהול ופיקוח בנייה',
-          line: 'בונה אמון עוד לפני השיחה הראשונה.',
           image: '/work/sharar.jpg',
           mobileImage: '/work/sharar-mobile.jpg',
         },
         {
-          client: 'איירקור',
           industry: 'מיזוג אוויר',
-          line: 'לחיצה אחת לשיחה או לוואטסאפ.',
           image: '/work/aircor.jpg',
           mobileImage: '/work/aircor-mobile.jpg',
         },
         {
-          client: 'מגה עפר',
           industry: 'עבודות עפר ותשתיות',
-          line: 'עיצוב נועז שבנוי להביא בקשות להצעת מחיר.',
           image: '/work/mega-afar.jpg',
           mobileImage: '/work/mega-afar-mobile.jpg',
         },

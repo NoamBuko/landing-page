@@ -69,30 +69,25 @@ export default function Work({ translations: t }: Props) {
                   <div className="w-[85%]">
                     <BrowserShot
                       src={p.image}
-                      alt={`${p.client} — ${p.industry}`}
+                      alt={p.industry}
                       eager={i === 1}
                     />
                   </div>
                   <div className="absolute right-0 bottom-0 w-[24%]">
                     <PhoneShot
                       src={p.mobileImage}
-                      alt={`${p.client} — ${p.industry} (mobile)`}
+                      alt={`${p.industry} (mobile)`}
                       sizes="(min-width: 768px) 8vw, 25vw"
                     />
                   </div>
                 </div>
-                <div dir={t.dir}>
-                  <div className="flex items-baseline gap-2 flex-wrap mb-1">
-                    <h3
-                      className="text-lg font-semibold text-foreground"
-                      style={{ fontFamily: 'var(--font-display)' }}
-                    >
-                      {p.client}
-                    </h3>
-                    <span className="text-sm text-muted">· {p.industry}</span>
-                  </div>
-                  <p className="text-sm text-muted leading-relaxed">{p.line}</p>
-                </div>
+                <h3
+                  dir={t.dir}
+                  className="text-lg font-semibold text-foreground"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  {p.industry}
+                </h3>
               </div>
             ))}
           </div>

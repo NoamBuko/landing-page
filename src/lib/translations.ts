@@ -57,7 +57,7 @@ export const t = {
       h2: "Landing pages I've built.",
       projects: [
         {
-          client: 'Israel Sharar',
+          client: 'Yisrael Sherrer',
           industry: 'Construction management',
           line: 'Builds trust before the first call.',
           image: '/work/sharar.jpg',

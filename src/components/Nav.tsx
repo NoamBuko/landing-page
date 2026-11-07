@@ -12,6 +12,8 @@ export default function Nav({ translations: t, lang }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const isHe = lang === 'he';
+  // While the transparent nav sits over the dark hero, it switches to light text.
+  const onDark = !scrolled && !menuOpen;
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
@@ -47,16 +49,16 @@ export default function Nav({ translations: t, lang }: Props) {
           alt="Noam Bukobza"
           width={40}
           height={40}
-          className="hidden md:block w-10 h-10 shrink-0"
+          className={`hidden md:block w-10 h-10 shrink-0 rounded-[0.6rem] ${onDark ? 'ring-1 ring-white/25' : ''}`}
         />
         <span className="flex flex-col items-start">
           <span
-            className="text-base font-bold leading-tight text-foreground tracking-tight whitespace-nowrap"
+            className={`text-base font-bold leading-tight tracking-tight whitespace-nowrap ${onDark ? 'text-white' : 'text-foreground'}`}
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Noam Bukobza
           </span>
-          <span className="text-xs font-medium uppercase tracking-widest whitespace-nowrap" style={{ color: 'var(--color-accent)' }}>
+          <span className={`text-xs font-medium uppercase tracking-widest whitespace-nowrap ${onDark ? 'text-mint' : 'text-accent'}`}>
             {isHe ? 'דפי נחיתה' : 'Landing Pages'}
           </span>
         </span>
@@ -68,16 +70,15 @@ export default function Nav({ translations: t, lang }: Props) {
           <button
             key={link.id}
             onClick={() => scrollTo(link.id)}
-            className="text-base font-medium text-muted hover:text-foreground transition-colors"
+            className={`text-base font-medium transition-colors ${onDark ? 'text-white/75 hover:text-white' : 'text-muted hover:text-foreground'}`}
           >
             {link.label}
           </button>
         ))}
-        <LangToggle lang={lang} />
+        <LangToggle lang={lang} onDark={onDark} />
         <button
           onClick={() => scrollTo('contact')}
-          className="text-base font-medium text-white px-5 py-2.5 rounded-full transition-opacity hover:opacity-90"
-          style={{ backgroundColor: 'var(--color-accent)' }}
+          className={`text-base font-medium px-5 py-2.5 rounded-full transition-opacity hover:opacity-90 ${onDark ? 'bg-white text-hero-dark' : 'bg-accent text-white'}`}
         >
           {t.nav.cta}
         </button>
@@ -88,8 +89,7 @@ export default function Nav({ translations: t, lang }: Props) {
         {PHONE_TEL && (
           <a
             href={`tel:${PHONE_TEL}`}
-            className="p-2 rounded-full text-white"
-            style={{ backgroundColor: 'var(--color-accent)' }}
+            className={`p-2 rounded-full ${onDark ? 'bg-white text-hero-dark' : 'bg-accent text-white'}`}
             aria-label={t.footer.callAria}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -97,10 +97,10 @@ export default function Nav({ translations: t, lang }: Props) {
             </svg>
           </a>
         )}
-        <LangToggle lang={lang} />
+        <LangToggle lang={lang} onDark={onDark} />
         <button
           onClick={() => setMenuOpen((o) => !o)}
-          className="p-2 text-foreground"
+          className={`p-2 ${onDark ? 'text-white' : 'text-foreground'}`}
           aria-label="Toggle menu"
         >
           {menuOpen ? (
@@ -142,12 +142,14 @@ export default function Nav({ translations: t, lang }: Props) {
   );
 }
 
-function LangToggle({ lang }: { lang: Lang }) {
+function LangToggle({ lang, onDark }: { lang: Lang; onDark: boolean }) {
   const isHe = lang === 'he';
   return (
     <a
       href={isHe ? '/en' : '/he'}
-      className="flex items-center gap-1.5 px-2 md:px-3 py-1.5 rounded-full border border-border text-xs font-medium text-muted hover:border-accent hover:text-foreground transition-colors"
+      className={`flex items-center gap-1.5 px-2 md:px-3 py-1.5 rounded-full border text-xs font-medium transition-colors ${
+        onDark ? 'border-white/25 text-white/80 hover:border-white hover:text-white' : 'border-border text-muted hover:border-accent hover:text-foreground'
+      }`}
       aria-label={isHe ? 'Switch to English' : 'עבור לעברית'}
     >
       <span className="text-lg md:text-sm leading-none">{isHe ? '🇺🇸' : '🇮🇱'}</span>

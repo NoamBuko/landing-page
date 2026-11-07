@@ -12,6 +12,8 @@ button:not(:disabled),
   --color-border: #e5e3de;
   --color-accent: #2d6a4f;
   --color-accent-light: #eaf2ec;
+  --color-hero-dark: #10291f;
+  --color-mint: #8fdcb4;
   --font-sans: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
   --font-display: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
 }
@@ -38,4 +40,32 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Hero background: white dots and a green glow on the deep green hero */
+.hero-dots {
+  background-image: radial-gradient(circle, rgb(255 255 255 / 0.13) 1px, transparent 1.6px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
+}
+
+.hero-glow {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in srgb, var(--color-accent) 85%, transparent),
+    color-mix(in srgb, var(--color-accent) 35%, transparent) 55%,
+    transparent 100%
+  );
+  filter: blur(24px);
+  animation: hero-glow-drift 16s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow-drift {
+  from { transform: translate3d(-5%, 0, 0) scale(1); }
+  to   { transform: translate3d(5%, 4%, 0) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow { animation: none; }
 }

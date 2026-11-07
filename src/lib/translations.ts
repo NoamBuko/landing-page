@@ -21,6 +21,8 @@ export const t = {
       eyebrow: 'Custom-built for your business',
       h1Lead: 'A landing page that ',
       h1Accent: 'brings you customers.',
+      // Shown in turn after h1Accent, then the headline settles back on h1Accent.
+      h1Rotating: ['makes your phone ring.', 'works for you 24/7.', 'fills your calendar.'],
       sub: 'People find you, like what they see, and reach out. Simple as that.',
       cta1: 'Get your landing page →',
       cta2: 'See my work',
@@ -170,6 +172,7 @@ export const t = {
       eyebrow: 'מותאם אישית לעסק שלך',
       h1Lead: 'דף נחיתה ',
       h1Accent: 'שמביא לך לקוחות.',
+      h1Rotating: ['שגורם לטלפון לצלצל.', 'שעובד בשבילך 24/7.', 'שממלא לך את היומן.'],
       sub: 'אנשים מוצאים אותך, אוהבים את מה שהם רואים ופונים אליך. ככה פשוט.',
       cta1: 'אני רוצה דף נחיתה ←',
       cta2: 'לעבודות שלי',

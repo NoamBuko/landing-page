@@ -6,6 +6,12 @@ interface Props {
   translations: Translations;
 }
 
+const CheckIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden className="text-mint">
+    <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export default function Hero({ translations: t }: Props) {
   return (
     <section className="relative isolate overflow-hidden flex flex-col items-center px-[5vw] pt-32 sm:pt-40 pb-16 sm:pb-24 text-center bg-hero-dark rounded-b-[2rem] sm:rounded-b-[3rem]">
@@ -57,11 +63,14 @@ export default function Hero({ translations: t }: Props) {
 
       <Reveal delay={240}>
         <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-7 text-sm font-medium text-white/75">
+          <li className="flex items-center gap-1.5">
+            <CheckIcon />
+            <s className="text-white/50">{t.hero.price.old}</s>
+            <span className="font-semibold text-white">{t.hero.price.now}</span>
+          </li>
           {t.hero.stats.map((stat) => (
             <li key={stat} className="flex items-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden className="text-mint">
-                <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <CheckIcon />
               {stat}
             </li>
           ))}

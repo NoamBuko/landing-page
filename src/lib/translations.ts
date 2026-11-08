@@ -7,7 +7,7 @@ export const t = {
     meta: {
       title: 'Landing Pages for Businesses in Israel | Noam Bukobza',
       description:
-        'A custom landing page that brings you customers, for a fixed 2,000₪. Written, designed and live in 1–2 weeks. Based in Beit Shemesh, working across Israel.',
+        'A custom landing page that brings you customers. First 5 clients pay a fixed 1,000₪ (50% off). Written, designed and live in 1–2 weeks. Based in Beit Shemesh, working across Israel.',
     },
     nav: {
       work: 'My work',
@@ -26,7 +26,19 @@ export const t = {
       sub: 'People find you, like what they see, and reach out. Simple as that.',
       cta1: 'Get your landing page →',
       cta2: 'See my work',
-      stats: ['2,000₪ fixed price', 'Live in 1–2 weeks', 'No monthly fees'],
+      price: { old: '2,000₪ fixed price', now: '1,000₪ limited offer' },
+      stats: ['Live in 1–2 weeks', 'No monthly fees'],
+    },
+    promo: {
+      eyebrow: 'Launch offer',
+      title: 'First 5 clients get 50% off',
+      oldPrice: '2,000₪',
+      newPrice: '1,000₪',
+      body: 'Your custom landing page, written, designed and live in 1–2 weeks. Same work, half the price.',
+      cta: 'Claim 50% off on WhatsApp',
+      close: 'Close',
+      pill: 'Limited offer! 50% off',
+      whatsappMessage: "Hi Noam, I saw the 50% offer for your first 5 clients and I'm interested in a landing page.",
     },
     howItWorks: {
       label: 'How it works',
@@ -93,7 +105,7 @@ export const t = {
       items: [
         {
           q: "How much does it cost?",
-          a: "A landing page costs 2,000₪. That's a fixed price agreed before we start, so there are no surprises.",
+          a: "A landing page normally costs 2,000₪, but my first 5 clients pay 1,000₪ (50% off). Either way it's a fixed price agreed before we start, so there are no surprises.",
         },
         {
           q: "How long does it take?",
@@ -158,7 +170,7 @@ export const t = {
     meta: {
       title: 'בניית דפי נחיתה לעסקים | נועם בוקובזה',
       description:
-        'דף נחיתה מותאם אישית שמביא לך לקוחות, במחיר קבוע של 2,000₪. כתיבה, עיצוב ועלייה לאוויר תוך שבוע–שבועיים. מבית שמש, לכל הארץ.',
+        'דף נחיתה מותאם אישית שמביא לך לקוחות. ל-5 הלקוחות הראשונים מחיר קבוע של 1,000₪ (50% הנחה). כתיבה, עיצוב ועלייה לאוויר תוך שבוע–שבועיים. מבית שמש, לכל הארץ.',
     },
     nav: {
       work: 'העבודות שלי',
@@ -176,7 +188,19 @@ export const t = {
       sub: 'אנשים מוצאים אותך, אוהבים את מה שהם רואים ופונים אליך. ככה פשוט.',
       cta1: 'אני רוצה דף נחיתה ←',
       cta2: 'לעבודות שלי',
-      stats: ['מחיר קבוע 2,000₪', 'באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
+      price: { old: 'מחיר קבוע 2,000₪', now: 'הצעה מוגבלת 1,000₪' },
+      stats: ['באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
+    },
+    promo: {
+      eyebrow: 'מבצע השקה',
+      title: '50% הנחה ל-5 הלקוחות הראשונים',
+      oldPrice: '2,000₪',
+      newPrice: '1,000₪',
+      body: 'דף נחיתה מותאם אישית, כולל כתיבה ועיצוב, באוויר תוך שבוע–שבועיים. אותה עבודה, חצי מחיר.',
+      cta: 'לקבלת ההנחה בוואטסאפ',
+      close: 'סגירה',
+      pill: 'הצעה מוגבלת! 50% הנחה',
+      whatsappMessage: 'היי נועם, ראיתי את מבצע ה-50% ל-5 הלקוחות הראשונים ואני מתעניין בדף נחיתה.',
     },
     howItWorks: {
       label: 'איך זה עובד',
@@ -243,7 +267,7 @@ export const t = {
       items: [
         {
           q: "כמה זה עולה?",
-          a: "דף נחיתה עולה 2,000₪. זה מחיר סגור שמסכמים לפני שמתחילים, בלי הפתעות.",
+          a: "דף נחיתה עולה בדרך כלל 2,000₪, אבל 5 הלקוחות הראשונים משלמים 1,000₪ (50% הנחה). בכל מקרה זה מחיר סגור שמסכמים לפני שמתחילים, בלי הפתעות.",
         },
         {
           q: "כמה זמן זה לוקח?",

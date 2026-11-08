@@ -10,6 +10,7 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import OfferPopup from '@/components/OfferPopup';
 
 export function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'he' }];
@@ -68,7 +69,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         availableLanguage: ['en', 'he'],
         makesOffer: {
           '@type': 'Offer',
-          price: 2000,
+          price: 1000,
           priceCurrency: 'ILS',
           itemOffered: {
             '@type': 'Service',
@@ -109,6 +110,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </main>
       <Footer translations={tr} />
       <WhatsAppButton lang={locale} />
+      <OfferPopup lang={locale} />
     </>
   );
 }

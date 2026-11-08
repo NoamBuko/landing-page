@@ -66,6 +66,39 @@ body {
   to   { transform: translate3d(5%, 4%, 0) scale(1.08); }
 }
 
+/* Hero secondary CTA: a mint comet travelling around the pill's border.
+   The span is masked down to a thin ring; ::before is the comet moving along it. */
+@supports (offset-path: rect(0 auto auto 0 round 1px)) {
+  .cta-comet {
+    position: absolute;
+    inset: -1px;
+    padding: 1.5px;
+    border-radius: inherit;
+    pointer-events: none;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .cta-comet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 3rem;
+    background: linear-gradient(to right, transparent, var(--color-mint));
+    offset-path: rect(0 auto auto 0 round 999px);
+    offset-anchor: 100% 50%;
+    animation: cta-comet-travel 4.5s linear infinite;
+  }
+}
+
+@keyframes cta-comet-travel {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-glow { animation: none; }
+  .cta-comet { display: none; }
 }

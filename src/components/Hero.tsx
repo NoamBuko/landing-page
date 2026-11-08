@@ -47,8 +47,9 @@ export default function Hero({ translations: t }: Props) {
           </a>
           <a
             href="#work"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white border border-white/30 hover:border-white transition-colors"
+            className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white border border-white/30 hover:border-white transition-colors"
           >
+            <span aria-hidden className="cta-comet" />
             {t.hero.cta2}
           </a>
         </div>

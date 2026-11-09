@@ -61,7 +61,7 @@ export default function Contact({ translations: t, lang }: Props) {
   };
 
   const inputClass =
-    'w-full px-4 py-3 rounded-xl border border-border bg-white text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:border-accent transition-colors';
+    'w-full px-4 py-3 rounded-xl border border-border bg-white text-base text-foreground placeholder:text-muted/60 focus:outline-none focus:border-accent transition-colors';
   const labelClass = 'block text-xs font-medium text-foreground mb-1.5';
 
   return (

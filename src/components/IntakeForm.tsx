@@ -16,7 +16,7 @@ const WHATSAPP_MESSAGE = 'היי, מילאתי את טופס ההיכרות. ה�
 type FormState = 'idle' | 'loading' | 'success' | 'error';
 
 const inputClass =
-  'w-full px-4 py-3 rounded-xl border border-border bg-white text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:border-accent transition-colors';
+  'w-full px-4 py-3 rounded-xl border border-border bg-white text-base text-foreground placeholder:text-muted/60 focus:outline-none focus:border-accent transition-colors';
 const labelClass = 'block text-sm font-medium text-foreground';
 const hintClass = 'text-xs text-muted mt-1';
 const optionClass =
@@ -75,7 +75,7 @@ function ChoiceInput({ field, showMissing }: { field: ChoiceField; showMissing: 
               onChange={(e) => {
                 if (e.target.value) setOtherChecked(true);
               }}
-              className="min-w-0 flex-1 bg-transparent border-b border-border focus:outline-none focus:border-accent transition-colors"
+              className="min-w-0 flex-1 text-base bg-transparent border-b border-border focus:outline-none focus:border-accent transition-colors"
             />
           </label>
         )}

@@ -63,11 +63,6 @@ export default function Hero({ translations: t }: Props) {
 
       <Reveal delay={240}>
         <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-7 text-sm font-medium text-white/75">
-          <li className="flex items-center gap-1.5">
-            <CheckIcon />
-            <s className="text-white/50">{t.hero.price.old}</s>
-            <span className="font-semibold text-white">{t.hero.price.now}</span>
-          </li>
           {t.hero.stats.map((stat) => (
             <li key={stat} className="flex items-center gap-1.5">
               <CheckIcon />

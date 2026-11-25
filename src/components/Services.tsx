@@ -36,7 +36,7 @@ export default function Services({ translations: t }: Props) {
   const s = t.services;
 
   return (
-    <section id="services" className="pt-20 sm:pt-24 pb-4 px-[5vw]">
+    <section id="services" className="pt-4 sm:pt-6 pb-4 px-[5vw]">
       <div className="max-w-5xl mx-auto">
         <Reveal>
           <p

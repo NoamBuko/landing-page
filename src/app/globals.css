@@ -50,6 +50,27 @@ body {
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
 }
 
+/* Below the hero: the deep green fades into the page background. Eased (smoothstep) stops
+   mixed in oklab avoid the muddy grey band and hard edge a plain two-color gradient gives. */
+.hero-fade {
+  --from: var(--color-hero-dark);
+  --to: var(--color-background);
+  background: linear-gradient(
+    to bottom,
+    var(--from) 0%,
+    color-mix(in oklab, var(--from) 97%, var(--to)) 10%,
+    color-mix(in oklab, var(--from) 90%, var(--to)) 20%,
+    color-mix(in oklab, var(--from) 78%, var(--to)) 30%,
+    color-mix(in oklab, var(--from) 65%, var(--to)) 40%,
+    color-mix(in oklab, var(--from) 50%, var(--to)) 50%,
+    color-mix(in oklab, var(--from) 35%, var(--to)) 60%,
+    color-mix(in oklab, var(--from) 22%, var(--to)) 70%,
+    color-mix(in oklab, var(--from) 10%, var(--to)) 80%,
+    color-mix(in oklab, var(--from) 3%, var(--to)) 90%,
+    var(--to) 100%
+  );
+}
+
 .hero-glow {
   background: radial-gradient(
     closest-side,

@@ -12,10 +12,11 @@ const CheckIcon = () => (
 );
 
 export default function Hero({ translations: t }: Props) {
-  // The hero fills exactly one screen (min-h-svh) with its content centered; the rest of the page
-  // starts below the fold.
+  // The hero fills exactly one screen (min-h-svh) with its content centered. Below it, a tall
+  // gradient fades the green softly into the page background as you scroll.
   return (
-    <section className="relative isolate overflow-hidden min-h-svh flex flex-col items-center justify-center px-[5vw] pt-24 pb-12 sm:pt-[max(6rem,11vh)] sm:pb-[max(2.5rem,6vh)] text-center bg-hero-dark rounded-b-[2rem] sm:rounded-b-[3rem]">
+    <>
+    <section className="relative isolate overflow-hidden min-h-svh flex flex-col items-center justify-center px-[5vw] pt-24 pb-12 sm:pt-[max(6rem,11vh)] sm:pb-[max(2.5rem,6vh)] text-center bg-hero-dark">
       {/* Background: a faint dot grid plus a soft green glow behind the headline (see globals.css) */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="hero-dots absolute inset-0" />
@@ -84,5 +85,7 @@ export default function Hero({ translations: t }: Props) {
         </ul>
       </Reveal>
     </section>
+    <div aria-hidden className="hero-fade h-40 sm:h-56 lg:h-64 -mt-px" />
+    </>
   );
 }

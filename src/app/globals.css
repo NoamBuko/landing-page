@@ -35,6 +35,12 @@ html {
   html { font-size: 22px; }
 }
 
+/* Jumping to a section (the hero's scroll arrow, nav links) stops just below the fixed
+   5rem nav bar instead of hiding the section's top under it. */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -48,6 +54,20 @@ body {
   background-size: 22px 22px;
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
+}
+
+/* Hero scroll cue: a short dip then a pause, repeating. Gentle enough not to nag. */
+.scroll-cue {
+  animation: scroll-cue 2.4s ease-in-out infinite;
+}
+
+@keyframes scroll-cue {
+  0%, 50%, 100% { transform: translateY(0); }
+  25% { transform: translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue { animation: none; }
 }
 
 /* Below the hero: the deep green fades into the page background. Eased (smoothstep) stops

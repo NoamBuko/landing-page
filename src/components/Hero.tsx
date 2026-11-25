@@ -84,6 +84,16 @@ export default function Hero({ translations: t }: Props) {
           ))}
         </ul>
       </Reveal>
+      {/* Scroll cue: desktop and tablet only, hidden on short windows where it could crowd the badges */}
+      <a
+        href="#services"
+        aria-label={t.hero.scrollCue}
+        className="hidden md:flex [@media(max-height:640px)]:hidden absolute bottom-[max(1.25rem,3vh)] left-1/2 -translate-x-1/2 items-center justify-center w-11 h-11 rounded-full border border-white/25 text-white/70 hover:text-white hover:border-white/60 transition-colors"
+      >
+        <svg className="scroll-cue" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
+          <path d="M5 8l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </a>
     </section>
     <div aria-hidden className="hero-fade h-40 sm:h-56 lg:h-64 -mt-px" />
     </>

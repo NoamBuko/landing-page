@@ -24,6 +24,7 @@ export const t = {
       sub: 'I build your website, set up your Google Business profile and take care of the basic SEO, so customers find you, trust you, and call.',
       cta1: 'Get your business found →',
       cta2: 'See my work',
+      scrollCue: 'Scroll down',
       stats: ['3,000₪, everything included', 'Live in 1–2 weeks', 'No monthly fees'],
     },
     services: {
@@ -202,6 +203,7 @@ export const t = {
       sub: 'אני בונה לך אתר, מקים או משפר את הפרופיל העסקי שלך בגוגל ודואג לקידום הבסיסי, כדי שלקוחות ימצאו אותך, יסמכו עליך ויתקשרו.',
       cta1: 'אני רוצה שימצאו אותי ←',
       cta2: 'לעבודות שלי',
+      scrollCue: 'גלול למטה',
       stats: ['3,000₪, הכל כלול', 'באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
     },
     services: {

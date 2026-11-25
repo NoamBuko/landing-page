@@ -4,7 +4,6 @@ import { SITE_URL, PROFILES } from '@/lib/site';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
-import Services from '@/components/Services';
 import Work from '@/components/Work';
 import About from '@/components/About';
 import FAQ from '@/components/FAQ';
@@ -67,19 +66,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           { '@type': 'Country', name: locale === 'he' ? 'ישראל' : 'Israel' },
         ],
         availableLanguage: ['en', 'he'],
-        // One package at one price: website + Google Business Profile + basic SEO.
         makesOffer: {
           '@type': 'Offer',
-          price: 3000,
+          price: 2500,
           priceCurrency: 'ILS',
           itemOffered: {
             '@type': 'Service',
-            name:
-              locale === 'he'
-                ? 'בניית אתר לעסק, פרופיל עסקי בגוגל וקידום בסיסי'
-                : 'Business website, Google Business Profile setup and basic SEO',
-            serviceType: locale === 'he' ? 'בניית אתרים לעסקים' : 'Small business website design',
-            description: tr.services.items.map((it) => it.title).join(' · '),
+            name: locale === 'he' ? 'בניית דף נחיתה' : 'Landing page design',
+            serviceType: locale === 'he' ? 'בניית דפי נחיתה' : 'Landing page design',
             areaServed: { '@type': 'Country', name: locale === 'he' ? 'ישראל' : 'Israel' },
           },
         },
@@ -107,7 +101,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Nav translations={tr} lang={locale} />
       <main>
         <Hero translations={tr} />
-        <Services translations={tr} />
         <Work translations={tr} />
         <HowItWorks translations={tr} />
         <About translations={tr} />

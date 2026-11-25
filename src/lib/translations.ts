@@ -5,9 +5,9 @@ export const t = {
   en: {
     dir: 'ltr' as const,
     meta: {
-      title: 'Websites & Google Business Setup for Local Businesses | Noam Bukobza',
+      title: 'Landing Pages for Businesses in Israel | Noam Bukobza',
       description:
-        'Get found on Google and get more calls. I build your website, set up your Google Business profile and handle the basic SEO, all for a fixed 3,000₪. Live in 1–2 weeks. Based in Beit Shemesh, working across Israel.',
+        'A custom landing page that brings you customers, for a fixed 2,500₪. Written, designed and live in 1–2 weeks. Based in Beit Shemesh, working across Israel.',
     },
     nav: {
       work: 'My work',
@@ -18,39 +18,19 @@ export const t = {
       cta: 'Get in touch',
     },
     hero: {
-      eyebrow: 'Website · Google Business · SEO',
-      h1Lead: 'When people search for what you do, ',
-      h1Accent: 'they find you.',
-      sub: 'I build your website, set up your Google Business profile and take care of the basic SEO, so customers find you, trust you, and call.',
-      cta1: 'Get your business found →',
+      eyebrow: 'Custom-built for your business',
+      h1Lead: 'A landing page that ',
+      h1Accent: 'brings you customers.',
+      // Shown in turn after h1Accent, then the headline settles back on h1Accent.
+      h1Rotating: ['makes your phone ring.', 'works for you 24/7.', 'fills your calendar.'],
+      sub: 'People find you, like what they see, and reach out. Simple as that.',
+      cta1: 'Get your landing page →',
       cta2: 'See my work',
-      stats: ['3,000₪, everything included', 'Live in 1–2 weeks', 'No monthly fees'],
-    },
-    services: {
-      label: 'What you get',
-      h2: 'Everything your business needs to get found online.',
-      items: [
-        {
-          icon: 'site',
-          title: 'A website that sells',
-          desc: 'A fast, mobile-friendly site with your services, your work and a clear way to call or message you. I write the text, design it and host it.',
-        },
-        {
-          icon: 'maps',
-          title: 'Your business on Google Maps',
-          desc: 'I create your Google Business profile or improve the one you have: categories, service area, hours, photos and a link to your site. This is what people see when they search for a business near them.',
-        },
-        {
-          icon: 'seo',
-          title: 'Built for Google',
-          desc: 'Basic SEO done right: the words your customers search for in the text, fast loading, and everything Google needs to read and understand your site.',
-        },
-      ],
-      note: 'All for a fixed 3,000₪, with hosting included and no monthly fees.',
+      stats: ['2,500₪ fixed price', 'Live in 1–2 weeks', 'No monthly fees'],
     },
     howItWorks: {
       label: 'How it works',
-      h2: 'From one message to customers finding you.',
+      h2: 'From one message to a page that brings customers.',
       steps: [
         {
           num: '01',
@@ -59,24 +39,24 @@ export const t = {
         },
         {
           num: '02',
-          title: 'I build everything',
-          desc: "I write and design your website and set up your Google Business profile. You don't need to prepare anything.",
+          title: 'I build your page',
+          desc: "I write, design and build everything. You don't need to prepare anything.",
         },
         {
           num: '03',
           title: 'You give feedback',
-          desc: 'You see everything before it goes live and tell me what to change until you love it.',
+          desc: 'You see the page before it goes live and tell me what to change until you love it.',
         },
         {
           num: '04',
           title: 'You go live',
-          desc: "Your site goes online, your business shows up on Google, and people start reaching out. I'm here if you need anything later.",
+          desc: "Your page goes online and people start reaching out. I'm here if you need anything later.",
         },
       ],
     },
     work: {
       label: 'My work',
-      h2: "Websites I've built.",
+      h2: "Landing pages I've built.",
       projects: [
         {
           industry: 'Construction management',
@@ -105,7 +85,7 @@ export const t = {
     about: {
       label: 'About me',
       greeting: "Hi, I'm Noam.",
-      bio: "I'm a software developer who loves building things that actually help businesses. I've built products at startups and for small businesses, and now I make sure local businesses get found on Google, with a website and business profile that make people want to call you.",
+      bio: "I'm a software developer who loves building things that actually help businesses. I've built products at startups and for small businesses, and now I build landing pages that make people want to call you.",
     },
     faq: {
       label: 'FAQ',
@@ -113,11 +93,11 @@ export const t = {
       items: [
         {
           q: "How much does it cost?",
-          a: "Everything costs 3,000₪: your website, your Google Business profile and the basic SEO. It's a fixed price agreed before we start, so there are no surprises.",
+          a: "A landing page costs 2,500₪. That's a fixed price agreed before we start, so there are no surprises.",
         },
         {
           q: "How long does it take?",
-          a: "Usually 1–2 weeks, from our first chat until your site is live. Google sometimes takes a few extra days to verify a new business profile.",
+          a: "Usually 1–2 weeks, from our first chat until your page is live.",
         },
         {
           q: "What do I need to prepare?",
@@ -125,7 +105,7 @@ export const t = {
         },
         {
           q: "What if I want changes?",
-          a: "You see everything before it goes live and tell me what to change until you're happy with it. After launch, small changes are just one message away.",
+          a: "You see the page before it goes live and tell me what to change until you're happy with it. After launch, small changes are just one message away.",
         },
         {
           q: "Are there any monthly costs?",
@@ -133,25 +113,21 @@ export const t = {
         },
         {
           q: "Will people find me on Google?",
-          a: "That's the whole point. I set up your Google Business profile, which is what shows up on Google Maps and in \"near me\" searches, and I build your site so Google can read and understand it. Getting to the top takes time, and reviews from happy customers help a lot, so many businesses also run ads to start getting customers right away.",
+          a: "Your page is built so Google can read and understand it. Getting to the top of Google takes time, so many businesses also run ads to start getting customers right away.",
         },
         {
-          q: "I already have a Google Business profile. Is that a problem?",
-          a: "Not at all. I'll improve the one you have: fix the details, add photos and services, and connect it to your new site.",
-        },
-        {
-          q: "Do I own the site?",
-          a: "Yes. The site, the domain and your Google Business profile are all yours. I host the site for you at no monthly cost, and if you ever want to move it, I'll hand everything over.",
+          q: "Do I own the page?",
+          a: "Yes. The page and the domain are yours. I host it for you at no monthly cost, and if you ever want to move it, I'll hand everything over.",
         },
         {
           q: "Can't I just build it myself with AI or Wix?",
-          a: "You can. But you'd still need to write the text, design it, buy and connect a domain, set up hosting, create a Google Business profile and make sure Google can find you. With me you have one short chat and I handle everything. You also get a real person to call when you want a change.",
+          a: "You can. But you'd still need to write the text, design it, buy and connect a domain, set up hosting and make sure Google can find you. With me you have one short chat and I handle everything. You also get a real person to call when you want a change.",
         },
       ],
     },
     contact: {
       label: 'Get in touch',
-      h2: "Let's get your business found.",
+      h2: "Let's build your landing page.",
       sub: "Leave your details and I'll call you back to hear about your business.",
       nameLabel: 'Your name',
       namePlaceholder: '',
@@ -163,7 +139,7 @@ export const t = {
       orWhatsapp: 'Message me on WhatsApp',
       orCall: 'Call me',
       emailPrefix: 'Prefer email?',
-      whatsappMessage: "Hi Noam, I came from your website and I'd like to hear more.",
+      whatsappMessage: "Hi Noam, I came from your website and I'm interested in a landing page.",
       noCommit: 'No commitment. Just a conversation.',
       successTitle: 'Message sent!',
       successMsg: "Thanks for reaching out. I'll get back to you shortly.",
@@ -172,7 +148,7 @@ export const t = {
     footer: {
       copyright: '© 2026 Noam Bukobza',
       location: 'Beit Shemesh, Israel',
-      tagline: 'Websites and Google Business for local businesses in Israel.',
+      tagline: 'Landing pages for businesses in Israel.',
       contactHeading: 'Contact',
       callAria: 'Call Noam',
     },
@@ -180,9 +156,9 @@ export const t = {
   he: {
     dir: 'rtl' as const,
     meta: {
-      title: 'בניית אתר לעסק + פרופיל עסקי בגוגל | נועם בוקובזה',
+      title: 'בניית דפי נחיתה לעסקים | נועם בוקובזה',
       description:
-        'שימצאו אותך בגוגל ויתקשרו. אני בונה לך אתר, מקים או משפר את הפרופיל העסקי שלך בגוגל ודואג לקידום הבסיסי, הכל במחיר קבוע של 3,000₪. באוויר תוך שבוע–שבועיים. מבית שמש, לכל הארץ.',
+        'דף נחיתה מותאם אישית שמביא לך לקוחות, במחיר קבוע של 2,500₪. כתיבה, עיצוב ועלייה לאוויר תוך שבוע–שבועיים. מבית שמש, לכל הארץ.',
     },
     nav: {
       work: 'העבודות שלי',
@@ -193,39 +169,18 @@ export const t = {
       cta: 'בוא נדבר',
     },
     hero: {
-      eyebrow: 'אתר · פרופיל בגוגל · קידום בסיסי',
-      h1Lead: 'כשמחפשים את מה שאתה עושה, ',
-      h1Accent: 'מוצאים אותך.',
-      sub: 'אני בונה לך אתר, מקים או משפר את הפרופיל העסקי שלך בגוגל ודואג לקידום הבסיסי, כדי שלקוחות ימצאו אותך, יסמכו עליך ויתקשרו.',
-      cta1: 'אני רוצה שימצאו אותי ←',
+      eyebrow: 'מותאם אישית לעסק שלך',
+      h1Lead: 'דף נחיתה ',
+      h1Accent: 'שמביא לך לקוחות.',
+      h1Rotating: ['שגורם לטלפון לצלצל.', 'שעובד בשבילך 24/7.', 'שממלא לך את היומן.'],
+      sub: 'אנשים מוצאים אותך, אוהבים את מה שהם רואים ופונים אליך. ככה פשוט.',
+      cta1: 'אני רוצה דף נחיתה ←',
       cta2: 'לעבודות שלי',
-      stats: ['3,000₪, הכל כלול', 'באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
-    },
-    services: {
-      label: 'מה מקבלים',
-      h2: 'כל מה שהעסק שלך צריך כדי שימצאו אותו באינטרנט.',
-      items: [
-        {
-          icon: 'site',
-          title: 'אתר שמביא לקוחות',
-          desc: 'אתר מהיר ונוח בנייד, עם השירותים שלך, העבודות שלך ודרך ברורה להתקשר או לשלוח הודעה. אני כותב, מעצב ומאחסן.',
-        },
-        {
-          icon: 'maps',
-          title: 'העסק שלך בגוגל מפות',
-          desc: 'אני מקים לך פרופיל עסקי בגוגל או משפר את הקיים: קטגוריות, אזור שירות, שעות פעילות, תמונות וקישור לאתר. זה מה שאנשים רואים כשהם מחפשים עסק באזור שלהם.',
-        },
-        {
-          icon: 'seo',
-          title: 'בנוי בשביל גוגל',
-          desc: 'קידום בסיסי שעשוי נכון: המילים שהלקוחות שלך מחפשים, טעינה מהירה וכל מה שגוגל צריך כדי לקרוא ולהבין את האתר שלך.',
-        },
-      ],
-      note: 'הכל במחיר קבוע של 3,000₪, כולל אחסון ובלי תשלום חודשי.',
+      stats: ['מחיר קבוע 2,500₪', 'באוויר תוך שבוע–שבועיים', 'בלי תשלום חודשי'],
     },
     howItWorks: {
       label: 'איך זה עובד',
-      h2: 'מהודעה אחת ללקוחות שמוצאים אותך.',
+      h2: 'מהודעה אחת לדף שמביא לקוחות.',
       steps: [
         {
           num: '01',
@@ -234,24 +189,24 @@ export const t = {
         },
         {
           num: '02',
-          title: 'אני בונה הכל',
-          desc: 'אני כותב ומעצב את האתר ומקים את הפרופיל העסקי שלך בגוגל. אתה לא צריך להכין כלום.',
+          title: 'אני בונה את הדף שלך',
+          desc: 'אני כותב, מעצב ובונה הכל. אתה לא צריך להכין כלום.',
         },
         {
           num: '03',
           title: 'אתה נותן פידבק',
-          desc: 'אתה רואה הכל לפני שזה עולה לאוויר ואומר לי מה לשנות, עד שאתה אוהב את זה.',
+          desc: 'אתה רואה את הדף לפני שהוא עולה לאוויר ואומר לי מה לשנות, עד שאתה אוהב אותו.',
         },
         {
           num: '04',
           title: 'עולים לאוויר',
-          desc: 'האתר שלך עולה לאוויר, העסק שלך מופיע בגוגל ואנשים מתחילים לפנות אליך. אני כאן אם תצטרך משהו בהמשך.',
+          desc: 'הדף שלך עולה לאוויר ואנשים מתחילים לפנות אליך. אני כאן אם תצטרך משהו בהמשך.',
         },
       ],
     },
     work: {
       label: 'העבודות שלי',
-      h2: 'אתרים שבניתי.',
+      h2: 'דפי נחיתה שבניתי.',
       projects: [
         {
           industry: 'ניהול ופיקוח בנייה',
@@ -280,7 +235,7 @@ export const t = {
     about: {
       label: 'אודותיי',
       greeting: 'היי, אני נועם.',
-      bio: 'אני מפתח תוכנה שאוהב לבנות דברים שבאמת עוזרים לעסקים. בניתי מוצרים בסטארטאפים ולעסקים קטנים, ועכשיו אני דואג שעסקים מקומיים יימצאו בגוגל, עם אתר ופרופיל עסקי שגורמים לאנשים לרצות להתקשר.',
+      bio: 'אני מפתח תוכנה שאוהב לבנות דברים שבאמת עוזרים לעסקים. בניתי מוצרים בסטארטאפים ולעסקים קטנים, ועכשיו אני בונה דפי נחיתה שגורמים לאנשים לרצות להתקשר אליך.',
     },
     faq: {
       label: 'שאלות נפוצות',
@@ -288,11 +243,11 @@ export const t = {
       items: [
         {
           q: "כמה זה עולה?",
-          a: "הכל עולה 3,000₪: האתר, הפרופיל העסקי בגוגל והקידום הבסיסי. זה מחיר סגור שמסכמים לפני שמתחילים, בלי הפתעות.",
+          a: "דף נחיתה עולה 2,500₪. זה מחיר סגור שמסכמים לפני שמתחילים, בלי הפתעות.",
         },
         {
           q: "כמה זמן זה לוקח?",
-          a: "בדרך כלל שבוע עד שבועיים, מהשיחה הראשונה ועד שהאתר שלך באוויר. לפעמים גוגל לוקח עוד כמה ימים לאמת פרופיל עסקי חדש.",
+          a: "בדרך כלל שבוע עד שבועיים, מהשיחה הראשונה ועד שהדף שלך באוויר.",
         },
         {
           q: "מה אני צריך להכין?",
@@ -300,7 +255,7 @@ export const t = {
         },
         {
           q: "מה אם אני רוצה שינויים?",
-          a: "אתה רואה הכל לפני שזה עולה לאוויר ואומר לי מה לשנות, עד שאתה מרוצה. אחרי ההשקה, שינויים קטנים הם במרחק הודעה.",
+          a: "אתה רואה את הדף לפני שהוא עולה לאוויר ואומר לי מה לשנות, עד שאתה מרוצה. אחרי ההשקה, שינויים קטנים הם במרחק הודעה.",
         },
         {
           q: "יש עלויות חודשיות?",
@@ -308,25 +263,21 @@ export const t = {
         },
         {
           q: "אנשים ימצאו אותי בגוגל?",
-          a: "זו בדיוק המטרה. אני מקים לך פרופיל עסקי בגוגל, שזה מה שמופיע בגוגל מפות ובחיפושים כמו \"חשמלאי באזור שלי\", ובונה את האתר כך שגוגל יוכל לקרוא ולהבין אותו. להגיע לראש התוצאות לוקח זמן, וביקורות מלקוחות מרוצים עוזרות מאוד, ולכן הרבה עסקים מריצים גם פרסום כדי להתחיל לקבל לקוחות מיד.",
+          a: "הדף שלך בנוי כך שגוגל יוכל לקרוא ולהבין אותו. להגיע לראש תוצאות החיפוש לוקח זמן, ולכן הרבה עסקים מריצים גם פרסום כדי להתחיל לקבל לקוחות מיד.",
         },
         {
-          q: "כבר יש לי פרופיל בגוגל. זו בעיה?",
-          a: "בכלל לא. אני אשפר את הקיים: אעדכן את הפרטים, אוסיף תמונות ושירותים ואחבר אותו לאתר החדש.",
-        },
-        {
-          q: "האתר בבעלותי?",
-          a: "כן. האתר, הדומיין והפרופיל העסקי בגוגל שלך. אני מארח את האתר בשבילך בלי עלות חודשית, ואם תרצה להעביר אותו למקום אחר, אעביר לך הכל.",
+          q: "הדף בבעלותי?",
+          a: "כן. הדף והדומיין שלך. אני מארח אותו בשבילך בלי עלות חודשית, ואם תרצה להעביר אותו למקום אחר, אעביר לך הכל.",
         },
         {
           q: "אני לא יכול פשוט לבנות את זה לבד עם AI או Wix?",
-          a: "אפשר. אבל עדיין תצטרך לכתוב את הטקסטים, לעצב, לקנות ולחבר דומיין, לדאוג לאחסון, להקים פרופיל עסקי בגוגל ולוודא שגוגל מוצא אותך. איתי זו שיחה קצרה אחת ואני דואג להכל. ויש לך גם בן אדם אמיתי להתקשר אליו כשתרצה שינוי.",
+          a: "אפשר. אבל עדיין תצטרך לכתוב את הטקסטים, לעצב, לקנות ולחבר דומיין, לדאוג לאחסון ולוודא שגוגל מוצא אותך. איתי זו שיחה קצרה אחת ואני דואג להכל. ויש לך גם בן אדם אמיתי להתקשר אליו כשתרצה שינוי.",
         },
       ],
     },
     contact: {
       label: 'צור קשר',
-      h2: 'בוא נדאג שימצאו אותך.',
+      h2: 'בוא נבנה את דף הנחיתה שלך.',
       sub: 'השאר פרטים ואחזור אליך כדי לשמוע על העסק שלך.',
       nameLabel: 'השם שלך',
       namePlaceholder: '',
@@ -338,7 +289,7 @@ export const t = {
       orWhatsapp: 'שלח הודעה בוואטסאפ',
       orCall: 'התקשר אליי',
       emailPrefix: 'מעדיף מייל?',
-      whatsappMessage: 'היי נועם, הגעתי מהאתר ואשמח לשמוע עוד.',
+      whatsappMessage: 'היי נועם, הגעתי מהאתר ואני מתעניין בדף נחיתה.',
       noCommit: 'ללא התחייבות. רק שיחה.',
       successTitle: 'ההודעה נשלחה!',
       successMsg: 'תודה על הפנייה. אחזור אליך בהקדם.',
@@ -347,7 +298,7 @@ export const t = {
     footer: {
       copyright: '© 2026 נועם בוקובזה',
       location: 'בית שמש, ישראל',
-      tagline: 'אתרים ופרופיל עסקי בגוגל לעסקים בישראל.',
+      tagline: 'דפי נחיתה לעסקים בישראל.',
       contactHeading: 'יצירת קשר',
       callAria: 'התקשר לנועם',
     },

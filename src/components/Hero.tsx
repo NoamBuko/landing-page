@@ -12,8 +12,10 @@ const CheckIcon = () => (
 );
 
 export default function Hero({ translations: t }: Props) {
+  // The hero fills exactly one screen (min-h-svh) with its content centered; the rest of the page
+  // starts below the fold.
   return (
-    <section className="relative isolate overflow-hidden flex flex-col items-center px-[5vw] pt-32 sm:pt-40 pb-16 sm:pb-24 text-center bg-hero-dark rounded-b-[2rem] sm:rounded-b-[3rem]">
+    <section className="relative isolate overflow-hidden min-h-svh flex flex-col items-center justify-center px-[5vw] pt-24 pb-12 sm:pt-[max(6rem,11vh)] sm:pb-[max(2.5rem,6vh)] text-center bg-hero-dark rounded-b-[2rem] sm:rounded-b-[3rem]">
       {/* Background: a faint dot grid plus a soft green glow behind the headline (see globals.css) */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="hero-dots absolute inset-0" />
@@ -22,8 +24,8 @@ export default function Hero({ translations: t }: Props) {
 
       <Reveal delay={40}>
         <p
-          className="font-semibold tracking-[0.22em] uppercase mb-5 sm:mb-7 text-mint"
-          style={{ fontSize: 'clamp(0.7rem, 0.64rem + 0.3vw, 0.85rem)' }}
+          className="font-semibold tracking-[0.22em] uppercase mb-5 text-mint"
+          style={{ fontSize: 'clamp(0.7rem, min(0.6rem + 0.4vw, 0.4rem + 0.9vh), 1rem)' }}
         >
           {t.hero.eyebrow}
         </p>
@@ -31,10 +33,12 @@ export default function Hero({ translations: t }: Props) {
 
       <Reveal delay={80}>
         <h1
-          className="font-bold leading-[1.06] tracking-tight text-white mb-6 sm:mb-8 max-w-[18ch]"
+          className="font-bold leading-[1.04] tracking-tight text-white text-balance mb-[max(1rem,2.5vh)] max-w-[24ch]"
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(2.1rem, 1rem + 5vw, 5rem)',
+            // As big as the screen allows: limited by both width and height, so the whole hero
+            // (buttons included) still fits in one screen on short laptops and tall monitors alike.
+            fontSize: 'clamp(2.25rem, min(1rem + 6vw, 0.5rem + 10vh), 7rem)',
           }}
         >
           {t.hero.h1Lead}
@@ -44,8 +48,8 @@ export default function Hero({ translations: t }: Props) {
 
       <Reveal delay={140}>
         <p
-          className="text-white/75 leading-relaxed max-w-[38ch] sm:max-w-2xl mx-auto mb-9 sm:mb-11"
-          style={{ fontSize: 'clamp(1.05rem, 0.95rem + 0.6vw, 1.5rem)' }}
+          className="text-white/75 leading-relaxed text-balance max-w-[38ch] sm:max-w-[48ch] mx-auto mb-[max(1.75rem,4vh)]"
+          style={{ fontSize: 'clamp(1.05rem, min(0.9rem + 0.9vw, 0.5rem + 2.3vh), 1.9rem)' }}
         >
           {t.hero.sub}
         </p>
@@ -55,13 +59,13 @@ export default function Hero({ translations: t }: Props) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold bg-white text-hero-dark transition-opacity hover:opacity-90"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 lg:px-9 lg:py-4 rounded-full text-sm lg:text-lg font-semibold bg-white text-hero-dark transition-opacity hover:opacity-90"
           >
             {t.hero.cta1}
           </a>
           <a
             href="#work"
-            className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white border border-white/30 hover:border-white transition-colors"
+            className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 lg:px-9 lg:py-4 rounded-full text-sm lg:text-lg font-semibold text-white border border-white/30 hover:border-white transition-colors"
           >
             <span aria-hidden className="cta-comet" />
             {t.hero.cta2}
@@ -70,7 +74,7 @@ export default function Hero({ translations: t }: Props) {
       </Reveal>
 
       <Reveal delay={240}>
-        <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-7 text-sm font-medium text-white/75">
+        <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-[max(1.25rem,3vh)] text-sm lg:text-base font-medium text-white/75">
           {t.hero.stats.map((stat) => (
             <li key={stat} className="flex items-center gap-1.5">
               <CheckIcon />

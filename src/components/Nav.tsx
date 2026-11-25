@@ -65,7 +65,7 @@ export default function Nav({ translations: t, lang }: Props) {
       </button>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center gap-5 lg:gap-8">
+      <div className="hidden lg:flex items-center gap-8">
         {navLinks.map((link) => (
           <button
             key={link.id}
@@ -85,7 +85,7 @@ export default function Nav({ translations: t, lang }: Props) {
       </div>
 
       {/* Mobile controls */}
-      <div className="flex md:hidden items-center gap-2">
+      <div className="flex lg:hidden items-center gap-2">
         {PHONE_TEL && (
           <a
             href={`tel:${PHONE_TEL}`}
@@ -118,7 +118,7 @@ export default function Nav({ translations: t, lang }: Props) {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className={`absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border py-4 flex flex-col items-start px-[5vw] gap-4 md:hidden`}
+          className={`absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border py-4 flex flex-col items-start px-[5vw] gap-4 lg:hidden`}
         >
           {navLinks.map((link) => (
             <button
@@ -147,13 +147,13 @@ function LangToggle({ lang, onDark }: { lang: Lang; onDark: boolean }) {
   return (
     <a
       href={isHe ? '/en' : '/he'}
-      className={`flex items-center gap-1.5 px-2 md:px-3 py-1.5 rounded-full border text-xs font-medium transition-colors ${
+      className={`flex items-center gap-1.5 px-2 lg:px-3 py-1.5 rounded-full border text-xs font-medium transition-colors ${
         onDark ? 'border-white/25 text-white/80 hover:border-white hover:text-white' : 'border-border text-muted hover:border-accent hover:text-foreground'
       }`}
       aria-label={isHe ? 'Switch to English' : 'עבור לעברית'}
     >
-      <span className="text-lg md:text-sm leading-none">{isHe ? '🇺🇸' : '🇮🇱'}</span>
-      <span className="hidden md:inline">{isHe ? 'EN' : 'עב'}</span>
+      <span className="text-lg lg:text-sm leading-none">{isHe ? '🇺🇸' : '🇮🇱'}</span>
+      <span className="hidden lg:inline">{isHe ? 'EN' : 'עב'}</span>
     </a>
   );
 }

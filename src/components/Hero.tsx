@@ -1,6 +1,5 @@
 import { type Translations } from '@/lib/translations';
 import Reveal from './Reveal';
-import RotatingHeadline from './RotatingHeadline';
 
 interface Props {
   translations: Translations;
@@ -31,7 +30,16 @@ export default function Hero({ translations: t }: Props) {
       </Reveal>
 
       <Reveal delay={80}>
-        <RotatingHeadline lead={t.hero.h1Lead} phrases={[t.hero.h1Accent, ...t.hero.h1Rotating]} />
+        <h1
+          className="font-bold leading-[1.06] tracking-tight text-white mb-6 sm:mb-8 max-w-[18ch]"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(2.1rem, 1rem + 5vw, 5rem)',
+          }}
+        >
+          {t.hero.h1Lead}
+          <span className="text-mint">{t.hero.h1Accent}</span>
+        </h1>
       </Reveal>
 
       <Reveal delay={140}>

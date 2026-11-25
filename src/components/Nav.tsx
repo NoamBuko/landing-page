@@ -59,7 +59,7 @@ export default function Nav({ translations: t, lang }: Props) {
             Noam Bukobza
           </span>
           <span className={`text-xs font-medium uppercase tracking-widest whitespace-nowrap ${onDark ? 'text-mint' : 'text-accent'}`}>
-            {isHe ? 'דפי נחיתה' : 'Landing Pages'}
+            {isHe ? 'אתרים וגוגל לעסקים' : 'Websites & Google'}
           </span>
         </span>
       </button>

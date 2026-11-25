@@ -59,7 +59,7 @@ export default function Work({ translations: t }: Props) {
           </h2>
         </Reveal>
 
-        {/* Landing pages, fanned out on desktop; hovering one straightens it and brings it to the front */}
+        {/* Client sites, fanned out on desktop; hovering one straightens it and brings it to the front */}
         <Reveal delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-5" dir="ltr">
             {w.projects.map((p, i) => (

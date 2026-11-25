@@ -81,6 +81,17 @@ export const intakeFields: IntakeField[] = [
     required: true,
   },
   {
+    name: 'serviceArea',
+    key: 'Service area',
+    type: 'text',
+    label: { he: 'באילו אזורים אתה נותן שירות?', en: 'Which areas do you serve?' },
+    hint: {
+      he: 'למשל: בית שמש והסביבה, כל אזור ירושלים',
+      en: 'For example: Beit Shemesh and nearby, the whole Jerusalem area',
+    },
+    required: true,
+  },
+  {
     name: 'services',
     key: 'Main services / products',
     type: 'textarea',
@@ -128,6 +139,25 @@ export const intakeFields: IntakeField[] = [
     required: true,
   },
   {
+    name: 'googleProfile',
+    key: 'Google Business profile',
+    type: 'radio',
+    label: {
+      he: 'יש לעסק פרופיל בגוגל (Google Business)?',
+      en: 'Does the business have a Google Business profile?',
+    },
+    hint: {
+      he: 'זה מה שמופיע בגוגל מפות כשמחפשים את העסק',
+      en: 'This is what shows up on Google Maps when people search for you',
+    },
+    options: [
+      { he: 'כן', en: 'Yes' },
+      { he: 'לא', en: 'No' },
+      { he: 'לא בטוח', en: 'Not sure' },
+    ],
+    required: true,
+  },
+  {
     name: 'assets',
     key: 'Logo / brand / photos',
     type: 'radio',
@@ -172,23 +202,23 @@ export const intakeSteps: { title: Localized; sub: Localized; fields: string[] }
   {
     title: { he: 'העסק שלך', en: 'Your business' },
     sub: { he: 'מכאן אכתוב את הטקסטים לדף', en: "This is what I'll write the page from" },
-    fields: ['about', 'customers', 'services', 'unique'],
+    fields: ['about', 'customers', 'serviceArea', 'services', 'unique'],
   },
   {
     title: { he: 'הדף שלך', en: 'Your page' },
     sub: { he: 'עוד רגע מסיימים', en: 'Almost done' },
-    fields: ['goal', 'details', 'assets', 'pageLanguage', 'notes'],
+    fields: ['goal', 'details', 'googleProfile', 'assets', 'pageLanguage', 'notes'],
   },
 ];
 
 export const intakeCopy = {
   he: {
-    metaTitle: 'טופס היכרות – דף נחיתה לעסק שלך',
-    metaDescription: 'כמה שאלות קצרות (כ-5 דקות) כדי שאוכל להתחיל לבנות את הגרסה הראשונה של דף הנחיתה שלך.',
-    brandTag: 'דפי נחיתה',
+    metaTitle: 'טופס היכרות – אתר לעסק שלך',
+    metaDescription: 'כמה שאלות קצרות (כ-5 דקות) כדי שאוכל להתחיל לבנות את הגרסה הראשונה של האתר שלך.',
+    brandTag: 'אתרים וגוגל לעסקים',
     eyebrow: 'טופס היכרות',
-    h1: 'דף נחיתה לעסק שלך',
-    intro: 'היי! כדי שאוכל להתחיל לבנות את הגרסה הראשונה של דף הנחיתה שלך, אשמח שתענו על כמה שאלות קצרות.',
+    h1: 'אתר לעסק שלך',
+    intro: 'היי! כדי שאוכל להתחיל לבנות את הגרסה הראשונה של האתר שלך, אשמח שתענו על כמה שאלות קצרות.',
     introNote: 'את הלוגו ותמונות של העסק שלחו לי בוואטסאפ 🙂',
     duration: 'כ-5 דקות',
     switchLabel: 'English',
@@ -212,12 +242,12 @@ export const intakeCopy = {
     subject: (business: string) => `טופס היכרות חדש: ${business}`,
   },
   en: {
-    metaTitle: 'Getting started – a landing page for your business',
-    metaDescription: 'A few short questions (about 5 minutes) so I can start building the first version of your landing page.',
-    brandTag: 'Landing pages',
+    metaTitle: 'Getting started – a website for your business',
+    metaDescription: 'A few short questions (about 5 minutes) so I can start building the first version of your website.',
+    brandTag: 'Websites & Google',
     eyebrow: 'Getting started',
-    h1: 'A landing page for your business',
-    intro: "Hi! To start building the first version of your landing page, please answer a few short questions.",
+    h1: 'A website for your business',
+    intro: "Hi! To start building the first version of your website, please answer a few short questions.",
     introNote: 'Send me your logo and photos of the business on WhatsApp 🙂',
     duration: 'About 5 minutes',
     switchLabel: 'עברית',
